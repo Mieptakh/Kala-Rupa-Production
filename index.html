@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Kala Rupa Production - SMAS Brawijaya Smart School</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* ===== ROOT VARIABLES ===== */
+    :root {
+      --bg: #f9f7f2;
+      --text: #2c2c2c;
+      --text-light: #5c5c5c;
+      --accent: #b38b59;
+      --accent-dark: #8a6d43;
+      --accent-light: #d4b78f;
+      --gold: #c5a572;
+      --cream: #f5f1e8;
+      --paper: #fffef9;
+      --border: #e8e2d5;
+      --shadow: rgba(139, 115, 85, 0.08);
+      --shadow-hover: rgba(139, 115, 85, 0.15);
+      --transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --transition-slow: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+      --golden-ratio: 1.618;
+    }
+
+    /* ===== RESET & BASE STYLES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+      letter-spacing: 0.02em;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    h3 {
+      font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: var(--text-light);
+      max-width: min(680px, 90vw);
+      font-size: clamp(1rem, 1.1vw, 1.1rem);
+      line-height: 1.8;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    /* ===== LAYOUT UTILITIES ===== */
+    .container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 3vw, 2rem);
+      position: relative;
+    }
+
+    section {
+      padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 3vw, 2rem);
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .section-header {
+      margin-bottom: clamp(2rem, 4vw, 4rem);
+      position: relative;
+      width: 100%;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+      width: auto;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: clamp(3rem, 6vw, 5rem);
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    }
+
+    .section-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .section-description {
+      font-size: clamp(1rem, 1.15vw, 1.15rem);
+      max-width: min(700px, 90vw);
+      opacity: 0.9;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: clamp(0.875rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2.375rem);
+      background: transparent;
+      border: 1.5px solid var(--accent);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+      text-transform: uppercase;
+      white-space: nowrap;
+      min-height: 3.5rem;
+      width: auto;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: var(--accent);
+      transition: width 0.5s ease;
+      z-index: -1;
+    }
+
+    .btn:hover::before {
+      width: 100%;
+    }
+
+    .btn:hover {
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px var(--shadow-hover);
+    }
+
+    .btn-secondary {
+      border-color: var(--text-light);
+      color: var(--text-light);
+    }
+
+    .btn-secondary::before {
+      background: var(--text-light);
+    }
+
+    /* ===== HERO SECTION (PERFECTLY FITTED) ===== */
+    .hero {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background: 
+        linear-gradient(135deg, rgba(249, 247, 242, 0.97) 0%, rgba(245, 241, 232, 0.95) 100%),
+        url('https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=10');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+    }
+
+    .hero-content {
+      max-width: min(900px, 90vw);
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 5.5rem);
+      line-height: 1.1;
+      margin-bottom: clamp(1rem, 2vw, 2rem);
+      position: relative;
+      width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-title span::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: clamp(0.5rem, 1vw, 0.5rem);
+      background: rgba(179, 139, 89, 0.2);
+      z-index: -1;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 1.4vw, 1.4rem);
+      color: var(--text-light);
+      margin-bottom: clamp(1.5rem, 3vw, 3rem);
+      max-width: min(650px, 90vw);
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: clamp(0.75rem, 1.5vw, 1.25rem);
+      margin-top: clamp(1.5rem, 3vw, 3rem);
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    /* ===== VIDEO SECTION ===== */
+    .video-section {
+      background: var(--cream);
+      position: relative;
+      width: 100%;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-top: 56.25%;
+      margin-top: clamp(1.5rem, 3vw, 3rem);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .video-wrapper:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 40px 100px var(--shadow-hover);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ===== TEAM SECTION ===== */
+    .team-section {
+      background: var(--paper);
+      position: relative;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+      gap: clamp(1.5rem, 2.5vw, 2.5rem);
+      margin-top: clamp(1.5rem, 3vw, 3rem);
+      width: 100%;
+    }
+
+    .team-card {
+      background: white;
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px var(--shadow);
+      transition: var(--transition-slow);
+      position: relative;
+      border: 1px solid var(--border);
+      opacity: 0;
+      transform: translateY(30px);
+      width: 100%;
+      height: auto;
+      min-height: 500px;
+    }
+
+    .team-card.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .team-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 60px var(--shadow-hover);
+    }
+
+    .team-card-image {
+      height: clamp(250px, 40vw, 380px);
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .team-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .team-card:hover .team-card-image img {
+      transform: scale(1.08);
+    }
+
+    .team-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.7));
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .team-card:hover .team-card-overlay {
+      opacity: 1;
+    }
+
+    .team-card-content {
+      padding: clamp(1.25rem, 2vw, 1.75rem);
+      position: relative;
+      width: 100%;
+    }
+
+    .team-card-name {
+      font-size: clamp(1.3rem, 1.8vw, 1.6rem);
+      margin-bottom: 0.25rem;
+      color: var(--text);
+    }
+
+    .team-card-role {
+      color: var(--accent);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: clamp(0.8rem, 0.95vw, 0.95rem);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-card-class {
+      display: inline-block;
+      background: rgba(179, 139, 89, 0.1);
+      color: var(--accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 2px;
+      font-size: clamp(0.75rem, 0.85vw, 0.85rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .team-card-quote {
+      font-style: italic;
+      color: var(--text-light);
+      font-size: clamp(0.9rem, 1vw, 1rem);
+      line-height: 1.6;
+      border-left: 2px solid var(--border);
+      padding-left: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    /* ===== GALLERY SECTION ===== */
+    .gallery-section {
+      background: var(--cream);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+      gap: clamp(1rem, 2vw, 2rem);
+      margin-top: clamp(1.5rem, 3vw, 3rem);
+      width: 100%;
+    }
+
+    .gallery-item {
+      height: clamp(200px, 35vw, 320px);
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 15px 40px var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      width: 100%;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px var(--shadow-hover);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      color: white;
+      padding: clamp(1rem, 2vw, 1.875rem);
+      transform: translateY(20px);
+      opacity: 0;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .gallery-title {
+      font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+      margin-bottom: 0.25rem;
+      color: white;
+    }
+
+    .gallery-description {
+      color: rgba(255,255,255,0.8);
+      font-size: clamp(0.8rem, 0.95vw, 0.95rem);
+    }
+
+    /* ===== PARTNER SECTION ===== */
+    .partner-section {
+      background: var(--paper);
+    }
+
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+      gap: clamp(1rem, 2vw, 2.5rem);
+      align-items: center;
+      margin-top: clamp(1.5rem, 3vw, 3rem);
+      width: 100%;
+    }
+
+    .partner-item {
+      height: clamp(80px, 10vw, 120px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: clamp(0.75rem, 1.5vw, 1.5rem);
+      background: white;
+      border-radius: 2px;
+      box-shadow: 0 10px 30px var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      width: 100%;
+    }
+
+    .partner-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px var(--shadow-hover);
+    }
+
+    .partner-item img {
+      max-width: 100%;
+      max-height: clamp(40px, 5vw, 70px);
+      filter: grayscale(1) opacity(0.7);
+      transition: var(--transition);
+      width: auto;
+      height: auto;
+    }
+
+    .partner-item:hover img {
+      filter: grayscale(0) opacity(1);
+    }
+
+    /* ===== CONTACT SECTION (FIXED LAYOUT) ===== */
+    .contact-section {
+      background: var(--cream);
+      width: 100%;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: clamp(1rem, 2vw, 2.5rem);
+      margin-top: clamp(1.5rem, 3vw, 3rem);
+      width: 100%;
+    }
+
+    .contact-card {
+      background: white;
+      padding: clamp(1.5rem, 2.5vw, 2.5rem);
+      border-radius: 2px;
+      box-shadow: 0 15px 40px var(--shadow);
+      transition: var(--transition);
+      border: 1px solid var(--border);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px var(--shadow-hover);
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    }
+
+    .contact-icon {
+      font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+      color: var(--accent);
+      margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+    }
+
+    .contact-title {
+      font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+      margin-bottom: clamp(0.75rem, 1.25vw, 1.25rem);
+    }
+
+    .contact-details {
+      color: var(--text-light);
+      line-height: 1.8;
+      font-size: clamp(0.9rem, 1vw, 1rem);
+      flex-grow: 1;
+    }
+
+    .contact-details p {
+      margin-bottom: 0.5rem;
+      max-width: 100%;
+    }
+
+    .contact-details strong {
+      color: var(--text);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #1a1814;
+      color: #d4cfc7;
+      padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 3vw, 2rem) clamp(1.5rem, 3vw, 3rem);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+      gap: clamp(1.5rem, 3vw, 3rem);
+      margin-bottom: clamp(2rem, 4vw, 4rem);
+      width: 100%;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+      color: white;
+      margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+    }
+
+    .footer-logo span {
+      color: var(--accent-light);
+    }
+
+    .footer-description {
+      color: #a09a8f;
+      margin-bottom: clamp(1rem, 2vw, 2rem);
+      font-size: clamp(0.9rem, 1vw, 1rem);
+      line-height: 1.7;
+      max-width: 100%;
+    }
+
+    .footer-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+      color: white;
+      margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .footer-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: clamp(2rem, 3vw, 3rem);
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .footer-links {
+      list-style: none;
+      width: 100%;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+      width: 100%;
+    }
+
+    .footer-links a {
+      color: #a09a8f;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s ease;
+      font-size: clamp(0.9rem, 1vw, 1rem);
+      width: 100%;
+      word-wrap: break-word;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-light);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: clamp(1rem, 1.5vw, 1.5rem);
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(2.5rem, 3vw, 3rem);
+      height: clamp(2.5rem, 3vw, 3rem);
+      background: #2a2722;
+      color: #d4cfc7;
+      border-radius: 50%;
+      transition: var(--transition);
+      font-size: clamp(1rem, 1.2vw, 1.2rem);
+    }
+
+    .social-link:hover {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: clamp(0.75rem, 0.9vw, 0.9rem);
+      color: #7a756d;
+      padding-top: clamp(1rem, 2vw, 2rem);
+      border-top: 1px solid #2a2722;
+      width: 100%;
+      line-height: 1.5;
+    }
+
+    /* ===== LOADING ANIMATION ===== */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    .loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader {
+      width: 4rem;
+      height: 4rem;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ===== UTILITY CLASSES ===== */
+    .golden-ratio-width {
+      width: 61.8%;
+      max-width: 61.8%;
+    }
+
+    .golden-ratio-height {
+      height: 61.8%;
+      max-height: 61.8%;
+    }
+
+    .text-balance {
+      text-wrap: balance;
+    }
+
+    /* ===== CUSTOM SCROLLBAR ===== */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--cream);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-dark);
+    }
+
+    /* ===== EXTREME SMALL DEVICES (BELOW 320px) ===== */
+    @media screen and (max-width: 320px) {
+      html {
+        font-size: 14px;
+      }
+      
+      .hero {
+        min-height: 100svh;
+        padding: 1rem;
+      }
+      
+      .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 3rem;
+      }
+      
+      .team-card {
+        min-height: 450px;
+      }
+      
+      .team-card-image {
+        height: 200px;
+      }
+      
+      .contact-card {
+        min-height: 280px;
+        padding: 1.25rem;
+      }
+      
+      .gallery-item {
+        height: 180px;
+      }
+      
+      .partner-item {
+        height: 70px;
+        padding: 0.5rem;
+      }
+      
+      .footer-content {
+        gap: 2rem;
+      }
+    }
+
+    /* ===== MEDIUM DEVICES ===== */
+    @media screen and (max-width: 768px) {
+      .hero-cta {
+        flex-wrap: wrap;
+      }
+      
+      .btn {
+        min-width: 200px;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .team-grid,
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+      }
+    }
+
+    /* ===== LARGE DEVICES ===== */
+    @media screen and (min-width: 1200px) {
+      .container {
+        padding: 0 4rem;
+      }
+      
+      section {
+        padding: 8rem 4rem;
+      }
+      
+      .hero {
+        padding: 4rem;
+      }
+    }
+
+    /* ===== PRINT STYLES ===== */
+    @media print {
+      .loading-screen,
+      .btn::before,
+      .team-card-overlay,
+      .gallery-overlay {
+        display: none !important;
+      }
+      
+      .team-card,
+      .contact-card,
+      .partner-item {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader"></div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+        <span class="section-subtitle">SMAS Brawijaya Smart School</span>
+        <h1 class="hero-title text-balance">Kala <span>Rupa</span><br/>Production</h1>
+        <p class="hero-subtitle text-balance">
+          Sebuah Production House elegan yang mengkhususkan diri dalam pembuatan film dan short movie dengan pendekatan visual sinematik berkualitas tinggi. 
+          Sebagai bagian integral dari ekosistem pendidikan <strong>SMAS Brawijaya Smart School</strong>, kami memadukan keunggulan akademis dengan kreativitas sinematik yang visioner.
+        </p>
+        <div class="hero-cta">
+          <a href="#teaser" class="btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <i class="fas fa-play-circle"></i> Jelajahi Karya Kami
+          </a>
+          <a href="#contact" class="btn btn-secondary" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <i class="fas fa-envelope"></i> Hubungi Kami
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEASER SECTION -->
+  <section id="teaser" class="video-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-subtitle">Masterpiece Terbaru</span>
+        <h2 class="section-title">Teaser & Trailer</h2>
+        <p class="section-description">Sebuah visual storytelling yang merepresentasikan visi, dedikasi, dan keahlian Kala Rupa Production dalam setiap frame yang penuh makna.</p>
+      </div>
+      <div class="video-wrapper" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-subtitle">Para Visioner</span>
+        <h2 class="section-title">Cast & Crew</h2>
+        <p class="section-description text-balance">Tim siswa-siswi berbakat SMAS Brawijaya Smart School yang menghidupkan setiap proyek film dengan semangat, dedikasi, dan kreativitas tanpa batas.</p>
+      </div>
+      
+      <div class="team-grid">
+        <!-- Team Member 1 -->
+        <div class="team-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="team-card-image">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Siswi SMAS Brawijaya" loading="lazy" />
+            <div class="team-card-overlay"></div>
+          </div>
+          <div class="team-card-content">
+            <h3 class="team-card-name">Putri Amanda Sari</h3>
+            <div class="team-card-role">Pemeran Utama</div>
+            <div class="team-card-class">Kelas XI IPA 2</div>
+            <p class="team-card-quote text-balance">"Seni bukan hanya tentang menciptakan keindahan, tetapi tentang menyampaikan kebenaran yang tersembunyi di balik setiap cerita."</p>
+          </div>
+        </div>
+        
+        <!-- Team Member 2 -->
+        <div class="team-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+          <div class="team-card-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Siswa SMAS Brawijaya" loading="lazy" />
+            <div class="team-card-overlay"></div>
+          </div>
+          <div class="team-card-content">
+            <h3 class="team-card-name">Rizky Maulana Putra</h3>
+            <div class="team-card-role">Sutradara & Produser</div>
+            <div class="team-card-class">Kelas XII IPS 1</div>
+            <p class="team-card-quote text-balance">"Setiap cerita memiliki jiwa yang unik. Tugas kami adalah menemukan cara terbaik untuk membuatnya hidup di layar."</p>
+          </div>
+        </div>
+        
+        <!-- Team Member 3 -->
+        <div class="team-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="team-card-image">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Siswi SMAS Brawijaya" loading="lazy" />
+            <div class="team-card-overlay"></div>
+          </div>
+          <div class="team-card-content">
+            <h3 class="team-card-name">Maya Sari Dewi</h3>
+            <div class="team-card-role">Sinematografer</div>
+            <div class="team-card-class">Kelas XI IPA 3</div>
+            <p class="team-card-quote text-balance">"Cahaya adalah bahasa universal visual storytelling. Setiap sudut dan bayangan bercerita lebih dari sekadar kata-kata."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-subtitle">Dokumentasi Visual</span>
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-description text-balance">Momen-momen di balik layar yang menangkap esensi, semangat, dan dedikasi tim Kala Rupa Production dalam menciptakan karya sinematik.</p>
+      </div>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80" alt="Proses Syuting" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4 class="gallery-title">Proses Syuting</h4>
+            <p class="gallery-description">Sesi pengambilan gambar dengan peralatan profesional</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1492684223066-e9e4aab4d25e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80" alt="Brainstorming Kreatif" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4 class="gallery-title">Brainstorming Kreatif</h4>
+            <p class="gallery-description">Diskusi intensif pengembangan konsep cerita</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80" alt="Peralatan Produksi" loading="lazy" />
+          <div class="gallery-overlay">
+            <h4 class="gallery-title">Peralatan Produksi</h4>
+            <p class="gallery-description">Teknologi dan alat-alat profesional untuk hasil terbaik</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER SECTION -->
+  <section class="partner-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-subtitle">Kolaborasi & Dukungan</span>
+        <h2 class="section-title">Partner & Sponsor</h2>
+        <p class="section-description text-balance">Kami dengan tulus mengucapkan terima kasih kepada semua pihak yang telah mendukung perjalanan kreatif Kala Rupa Production.</p>
+      </div>
+      
+      <div class="partner-grid">
+        <div class="partner-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80&text=OSIS+BSS&bg=f5f1e8" alt="OSIS Brawijaya Smart School" loading="lazy" />
+        </div>
+        <div class="partner-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1634942536900-b6a6f50e8816?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80&text=Diknas+Malang&bg=f5f1e8" alt="Dinas Pendidikan Kota Malang" loading="lazy" />
+        </div>
+        <div class="partner-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1634942536969-4d4b1c6c41c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80&text=Creative+Hub&bg=f5f1e8" alt="Malang Creative Hub" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION (FIXED) -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+        <span class="section-subtitle">Jalin Kolaborasi</span>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-description text-balance">Tertarik untuk berkolaborasi atau ingin mengetahui lebih lanjut tentang karya dan visi kami? Tim Kala Rupa Production dengan senang hati akan merespons Anda.</p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3 class="contact-title">Lokasi</h3>
+          <div class="contact-details">
+            <p><strong>Kala Rupa Production</strong></p>
+            <p>SMAS Brawijaya Smart School<br/>
+            Jl. Veteran No. 12, Klojen<br/>
+            Malang, Jawa Timur 65145</p>
+          </div>
+        </div>
+        
+        <div class="contact-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+          <div class="contact-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3 class="contact-title">Penanggung Jawab</h3>
+          <div class="contact-details">
+            <p><strong>Bu Sari Dewi, M.Pd.</strong></p>
+            <p>Guru Pembimbing<br/>
+            WhatsApp: 0812-3456-7890<br/>
+            Email: sari.dewi@brawijayass.sch.id</p>
+          </div>
+        </div>
+        
+        <div class="contact-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3 class="contact-title">Kontak Produksi</h3>
+          <div class="contact-details">
+            <p><strong>Kolaborasi & Informasi</strong></p>
+            <p>Email: kalarupa@brawijayass.sch.id<br/>
+            Instagram: @kalarupa.production<br/>
+            Office: +62 341 567890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col" data-aos="fade-up" data-aos-duration="800">
+          <div class="footer-logo">Kala <span>Rupa</span> Production</div>
+          <p class="footer-description text-balance">Sebuah production house elegan yang menggabungkan keindahan visual dengan kedalaman naratif. Visual storytelling yang digarap dengan presisi, intensi, dan disiplin tinggi.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <h4 class="footer-title">Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="#teaser"><i class="fas fa-play"></i> Karya Kami</a></li>
+            <li><a href="#"><i class="fas fa-film"></i> Proyek</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Tim Kami</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Kontak</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+          <h4 class="footer-title">Sekolah</h4>
+          <p class="footer-description text-balance">Sebagai bagian integral dari komunitas pendidikan bergengsi, Kala Rupa Production merupakan wadah eksklusif pengembangan talenta film.</p>
+          <a href="#" class="footer-links"><i class="fas fa-external-link-alt"></i> Website Sekolah</a>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        © 2026 Kala Rupa Production — SMAS Brawijaya Smart School<br/>
+        <small>Didesain dengan penuh gairah oleh tim kreatif Kala Rupa Production.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script>
+    // Initialize AOS
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+        easing: 'ease-out-cubic',
+        disable: window.innerWidth < 320
+      });
+      
+      // Hide loading screen
+      setTimeout(() => {
+        const loadingScreen = document.getElementById('loadingScreen');
+        if (loadingScreen) {
+          loadingScreen.classList.add('hidden');
+        }
+      }, 1000);
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+            
+            // Update URL without scrolling
+            history.pushState(null, null, href);
+          }
+        });
+      });
+      
+      // Optimize performance for low-end devices
+      const isLowEndDevice = () => {
+        return window.innerWidth < 768 || 
+               (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && 
+                !/Chrome|Safari|Firefox|Edge/i.test(navigator.userAgent));
+      };
+      
+      if (isLowEndDevice()) {
+        // Disable some animations on low-end devices
+        document.querySelectorAll('[data-aos]').forEach(el => {
+          el.removeAttribute('data-aos');
+        });
+      }
+      
+      // Fix for iOS viewport height
+      function setVH() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      }
+      
+      setVH();
+      window.addEventListener('resize', setVH);
+      window.addEventListener('orientationchange', setVH);
+      
+      // Prevent zoom on double tap (iOS)
+      let lastTouchEnd = 0;
+      document.addEventListener('touchend', function(event) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false);
+    });
+    
+    // Handle resize events efficiently
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        AOS.refresh();
+      }, 250);
+    });
+  </script>
+</body>
+</html>
