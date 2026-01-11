@@ -6,18 +6,11 @@
     <title>Kala Rupa Production - SMAS Brawijaya Smart School</title>
     
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- GSAP untuk animasi advanced -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Swiper JS untuk carousel sponsor -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <style>
         /* ===== GOLDEN RATIO VARIABLES ===== */
@@ -29,22 +22,6 @@
             --golden-3: 23.6%;
             --golden-4: 14.6%;
             
-            /* Theme Palettes */
-            --theme-1-primary: #b38b59;
-            --theme-1-secondary: #8a6d43;
-            --theme-1-accent: #d4b78f;
-            --theme-1-bg: #f9f7f2;
-            
-            --theme-2-primary: #5a7d9a;
-            --theme-2-secondary: #3a5f7a;
-            --theme-2-accent: #8fb0d4;
-            --theme-2-bg: #f2f6f9;
-            
-            --theme-3-primary: #9a5a7d;
-            --theme-3-secondary: #7a3a5f;
-            --theme-3-accent: #d48fb0;
-            --theme-3-bg: #f9f2f6;
-            
             /* Light Mode Colors */
             --bg-light: #f9f7f2;
             --bg-secondary-light: #f5f1e8;
@@ -52,17 +29,14 @@
             --text-light: #2c2c2c;
             --text-light-light: #5c5c5c;
             --text-muted-light: #8a867c;
-            --accent-light: var(--theme-1-primary);
-            --accent-dark-light: var(--theme-1-secondary);
-            --accent-light-light: var(--theme-1-accent);
+            --accent-light: #b38b59;
+            --accent-dark-light: #8a6d43;
+            --accent-light-light: #d4b78f;
             --gold-light: #c5a572;
             --border-light: #e8e2d5;
             --shadow-light: rgba(139, 115, 85, 0.08);
             --shadow-hover-light: rgba(139, 115, 85, 0.15);
-            --hero-rupa-light: var(--theme-1-secondary);
-            --glass-bg-light: rgba(255, 255, 255, 0.85);
-            --glass-border-light: rgba(255, 255, 255, 0.2);
-            --glass-shadow-light: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --hero-rupa-light: #8a6d43;
             
             /* Dark Mode Colors */
             --bg-dark: #0f0e0c;
@@ -71,25 +45,20 @@
             --text-dark: #f0ede6;
             --text-light-dark: #b8b4a9;
             --text-muted-dark: #8a867c;
-            --accent-dark: var(--theme-1-accent);
-            --accent-dark-dark: var(--theme-1-primary);
+            --accent-dark: #d4b78f;
+            --accent-dark-dark: #b38b59;
             --accent-light-dark: #e8d4b8;
             --gold-dark: #c5a572;
             --border-dark: #3a362d;
             --shadow-dark: rgba(0, 0, 0, 0.4);
             --shadow-hover-dark: rgba(0, 0, 0, 0.6);
             --glow-dark: rgba(212, 183, 143, 0.1);
-            --hero-rupa-dark: var(--theme-1-accent);
-            --glass-bg-dark: rgba(26, 24, 20, 0.85);
-            --glass-border-dark: rgba(255, 255, 255, 0.1);
-            --glass-shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --hero-rupa-dark: #e8d4b8;
             
             /* Common Variables */
             --transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             --transition-slow: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
             --transition-theme: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            --theme-transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-            --card-content-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* ===== DEFAULT LIGHT MODE ===== */
@@ -109,9 +78,6 @@
             --shadow-hover: var(--shadow-hover-light);
             --glow: transparent;
             --hero-rupa: var(--hero-rupa-light);
-            --glass-bg: var(--glass-bg-light);
-            --glass-border: var(--glass-border-light);
-            --glass-shadow: var(--glass-shadow-light);
         }
 
         /* ===== DARK MODE ===== */
@@ -131,9 +97,6 @@
             --shadow-hover: var(--shadow-hover-dark);
             --glow: var(--glow-dark);
             --hero-rupa: var(--hero-rupa-dark);
-            --glass-bg: var(--glass-bg-dark);
-            --glass-border: var(--glass-border-dark);
-            --glass-shadow: var(--glass-shadow-dark);
         }
 
         /* ===== RESET & BASE STYLES ===== */
@@ -149,7 +112,8 @@
             font-size: 16px;
             -webkit-text-size-adjust: 100%;
             background: var(--bg);
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
+            overflow-x: hidden;
         }
 
         body {
@@ -161,30 +125,27 @@
             letter-spacing: 0.02em;
             min-height: 100vh;
             width: 100%;
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
             position: relative;
         }
 
-        body::before {
-            content: '';
+        /* ===== PARTICLE BACKGROUND ===== */
+        #particles-js {
             position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 50%, rgba(179, 139, 89, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(90, 125, 154, 0.05) 0%, transparent 50%);
-            pointer-events: none;
+            top: 0;
+            left: 0;
             z-index: -1;
-            transition: var(--theme-transition);
+            pointer-events: none;
+            opacity: 0.6;
         }
 
-        .dark-mode body::before {
-            background: radial-gradient(circle at 20% 50%, rgba(179, 139, 89, 0.03) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(90, 125, 154, 0.03) 0%, transparent 50%);
+        .dark-mode #particles-js {
+            opacity: 0.8;
         }
 
-        /* ===== ADVANCED THEME SWITCHER ===== */
+        /* ===== ELEGANT THEME TOGGLE ===== */
         .theme-switcher {
             position: fixed;
             top: 30px;
@@ -193,45 +154,25 @@
             background: var(--bg-tertiary);
             border-radius: 50px;
             padding: 8px;
-            box-shadow: var(--glass-shadow);
-            border: 1px solid var(--glass-border);
+            box-shadow: 0 4px 20px var(--shadow);
+            border: 1px solid var(--border);
             transition: var(--transition-theme);
             opacity: 0.9;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            transform: translateZ(0);
-            overflow: hidden;
-        }
-
-        .theme-switcher::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, 
-                rgba(var(--accent-rgb), 0.1) 0%, 
-                transparent 50%);
-            opacity: 0;
-            transition: var(--transition-slow);
-        }
-
-        .theme-switcher:hover::before {
-            opacity: 1;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
         .theme-switcher:hover {
             opacity: 1;
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 15px 40px var(--shadow-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px var(--shadow-hover);
         }
 
         .theme-toggle {
             background: none;
             border: none;
-            width: 48px;
-            height: 48px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -261,162 +202,476 @@
         }
 
         .theme-toggle i {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             position: relative;
             z-index: 1;
-            transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
         .theme-toggle:hover i {
-            transform: rotate(180deg) scale(1.2);
+            transform: rotate(15deg);
         }
 
         .theme-toggle .fa-sun {
-            color: #ffc107;
-            filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.3));
+            color: #f5a623;
         }
 
         .theme-toggle .fa-moon {
-            color: #6c757d;
+            color: #4a4a4a;
         }
 
         .dark-mode .theme-toggle .fa-moon {
             color: #f0ede6;
-            filter: drop-shadow(0 0 8px rgba(240, 237, 230, 0.3));
         }
 
-        .theme-toggle.active {
-            animation: pulse 0.6s ease;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-
-        /* ===== THEME SELECTOR PANEL ===== */
-        .theme-selector {
+        /* ===== DOT NAVIGATION ===== */
+        .dot-navigation {
             position: fixed;
-            top: 100px;
             right: 30px;
-            z-index: 999;
-            background: var(--bg-tertiary);
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: var(--glass-shadow);
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            transform: translateX(400px);
-            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-            width: 300px;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .theme-selector.active {
-            transform: translateX(0);
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .theme-selector-header {
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 900;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--border);
+            flex-direction: column;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 15px 8px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .theme-selector-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
-            color: var(--text);
+        .dark-mode .dot-navigation {
+            background: rgba(15, 14, 12, 0.7);
+            border: 1px solid rgba(212, 183, 143, 0.1);
         }
 
-        .theme-close {
-            background: none;
-            border: none;
-            color: var(--text-light);
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: var(--transition);
-            width: 32px;
-            height: 32px;
+        .dot-item {
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
+            background: var(--border);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .dot-item.active {
+            background: var(--accent);
+            transform: scale(1.3);
+        }
+
+        .dot-item:hover {
+            transform: scale(1.5);
+            background: var(--accent);
+        }
+
+        .dot-item::after {
+            content: attr(data-section);
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--bg-tertiary);
+            color: var(--text);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            border: 1px solid var(--border);
+        }
+
+        .dot-item:hover::after {
+            opacity: 1;
+        }
+
+        @media screen and (max-width: 768px) {
+            .dot-navigation {
+                display: none;
+            }
+        }
+
+        /* ===== LOGO STYLES ===== */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition);
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid transparent;
+            min-width: 200px;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--border);
+            box-shadow: 0 20px 40px var(--shadow-hover);
+        }
+
+.logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+
+mix-blend-mode: darken;
+
+}
+
+
+        .logo-item:hover .logo-img {
+            filter: grayscale(0) opacity(1);
+            transform: scale(1.1);
+        }
+
+        .logo-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-align: center;
+            max-width: 180px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* ===== HERO SECTION - FIXED BACKGROUND ===== */
+        .hero {
+            min-height: 100dvh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+            transition: var(--transition-theme);
+            box-sizing: border-box;
+            isolation: isolate;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(135deg, rgba(249, 247, 242, 0.97) 0%, rgba(245, 241, 232, 0.95) 100%),
+                url('https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            z-index: -2;
+            transition: var(--transition-theme);
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        .dark-mode .hero-background {
+            background: 
+                linear-gradient(135deg, rgba(15, 14, 12, 0.95) 0%, rgba(26, 24, 20, 0.97) 100%),
+                url('https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(179, 139, 89, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: min(1200px, 95vw);
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: clamp(1rem, 2vw, 2rem);
+            position: relative;
+            width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            transition: var(--transition-theme);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-title span {
+            color: var(--hero-rupa);
+            position: relative;
+            display: inline-block;
+            transition: var(--transition-theme);
+        }
+
+        .hero-title span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: clamp(0.3rem, 0.8vw, 0.5rem);
+            background: rgba(179, 139, 89, 0.15);
+            z-index: -1;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 1.4vw, 1.4rem);
+            color: var(--text-light);
+            margin-bottom: clamp(1.5rem, 3vw, 3rem);
+            max-width: min(800px, 90vw);
+            font-weight: 400;
+            line-height: 1.6;
+            margin-left: auto;
+            margin-right: auto;
+            transition: var(--transition-theme);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: clamp(0.75rem, 1.5vw, 1.25rem);
+            margin-top: clamp(1.5rem, 3vw, 3rem);
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ===== SPONSOR SECTION WITH 4:3 RATIO AND MARQUEE ===== */
+        .sponsor-section {
+            background: var(--bg-secondary);
+            padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 3vw, 2rem);
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            transition: var(--transition-theme);
+            min-height: auto;
+        }
+
+        .sponsor-content {
+            max-width: min(1200px, 95vw);
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .sponsor-marquee {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 3rem 0;
+        }
+
+        .sponsor-marquee-track {
+            display: flex;
+            width: calc(250px * 14);
+            animation: marquee-scroll 40s linear infinite;
+            gap: 2rem;
+        }
+
+        .sponsor-marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .sponsor-item {
+            flex: 0 0 auto;
+            width: 200px;
+            height: 150px; /* 4:3 ratio */
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .theme-close:hover {
-            color: var(--accent);
-            background: rgba(var(--accent-rgb), 0.1);
-        }
-
-        .theme-options {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .theme-option {
-            position: relative;
-            cursor: pointer;
-            border-radius: 10px;
-            overflow: hidden;
-            aspect-ratio: 1/1;
+            padding: 1.5rem;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            border: 1px solid var(--border);
             transition: var(--transition);
-            border: 2px solid transparent;
         }
 
-        .theme-option:hover {
-            transform: translateY(-5px) scale(1.05);
-        }
-
-        .theme-option.active {
+        .sponsor-item:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px var(--shadow-hover);
             border-color: var(--accent);
-            box-shadow: 0 0 20px rgba(var(--accent-rgb), 0.3);
         }
 
-        .theme-preview {
+        .sponsor-img {
             width: 100%;
             height: 100%;
-            display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
+            object-fit: contain;
+            filter: grayscale(1) opacity(0.7);
+            transition: var(--transition);
         }
 
-        .theme-1 .theme-preview {
-            background: linear-gradient(135deg, #f9f7f2 0%, #b38b59 33%, #8a6d43 66%, #d4b78f 100%);
+        .sponsor-item:hover .sponsor-img {
+            filter: grayscale(0) opacity(1);
         }
 
-        .theme-2 .theme-preview {
-            background: linear-gradient(135deg, #f2f6f9 0%, #5a7d9a 33%, #3a5f7a 66%, #8fb0d4 100%);
+        @keyframes marquee-scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 7));
+            }
         }
 
-        .theme-3 .theme-preview {
-            background: linear-gradient(135deg, #f9f2f6 0%, #9a5a7d 33%, #7a3a5f 66%, #d48fb0 100%);
-        }
+        /* ===== COUNTDOWN SECTION ===== */
+        .countdown-section {
+    background: linear-gradient(135deg, var(--bg) 0%, var(--bg-secondary) 100%);
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 60px var(--shadow);
+    max-width: min(1200px, 95vw);
 
-        .theme-label {
+    margin: 4rem auto; /* top-bottom 4rem, kiri-kanan auto */
+}
+
+
+        .countdown-section::before {
+            content: '';
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px;
-            text-align: center;
-            font-size: 0.8rem;
-            font-family: 'Inter', sans-serif;
-            backdrop-filter: blur(10px);
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 0%, rgba(179, 139, 89, 0.03) 50%, transparent 100%);
+            pointer-events: none;
         }
 
-        .dark-mode .theme-label {
-            background: rgba(255, 255, 255, 0.1);
+        .countdown-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .countdown-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .countdown-subtitle {
+            color: var(--text-light);
+            font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: clamp(1rem, 2vw, 2rem);
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 120px;
+            padding: 1.5rem 1rem;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .countdown-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .countdown-label {
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .countdown-info {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .countdown-location {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .countdown-date {
+            color: var(--accent);
+            font-size: clamp(1rem, 1.3vw, 1.3rem);
+            font-weight: 500;
+            letter-spacing: 1px;
         }
 
         /* ===== TYPOGRAPHY WITH GOLDEN RATIO ===== */
@@ -425,23 +680,23 @@
             font-weight: 600;
             line-height: 1.3;
             letter-spacing: 0.5px;
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         h1 {
-            font-size: calc(clamp(2.8rem, 5vw, 4.5rem) * var(--phi));
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
             margin-bottom: 1.5rem;
             position: relative;
         }
 
         h2 {
-            font-size: calc(clamp(2.2rem, 4vw, 3.2rem) * var(--phi));
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
             margin-bottom: 1.5rem;
             position: relative;
         }
 
         h3 {
-            font-size: calc(clamp(1.5rem, 2.5vw, 1.8rem) * var(--phi));
+            font-size: clamp(1.5rem, 2.5vw, 1.8rem);
             margin-bottom: 0.75rem;
         }
 
@@ -449,8 +704,8 @@
             color: var(--text-light);
             max-width: min(680px, 90vw);
             font-size: clamp(1rem, 1.1vw, 1.1rem);
-            line-height: var(--phi);
-            transition: var(--theme-transition);
+            line-height: 1.6;
+            transition: var(--transition-theme);
         }
 
         a {
@@ -462,7 +717,7 @@
         strong {
             color: var(--accent);
             font-weight: 600;
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         /* ===== LAYOUT WITH GOLDEN RATIO ===== */
@@ -479,7 +734,12 @@
             position: relative;
             width: 100%;
             overflow: hidden;
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
         }
 
         .section-header {
@@ -490,12 +750,12 @@
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: calc(clamp(2.2rem, 4vw, 3.5rem) * var(--phi));
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
             margin-bottom: 1rem;
             position: relative;
             display: inline-block;
             width: auto;
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         .section-title::after {
@@ -504,9 +764,9 @@
             bottom: -0.5rem;
             left: 0;
             width: clamp(3rem, 6vw, 5rem);
-            height: 3px;
+            height: 2px;
             background: linear-gradient(90deg, var(--accent), var(--accent-dark));
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         .section-subtitle {
@@ -518,15 +778,24 @@
             text-transform: uppercase;
             margin-bottom: 1rem;
             display: block;
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
-        .section-description {
-            font-size: clamp(1rem, 1.15vw, 1.15rem);
-            max-width: min(700px, 90vw);
-            opacity: 0.9;
-            transition: var(--theme-transition);
-        }
+.section-description {
+    font-size: clamp(1rem, 1.1vw, 1.15rem);
+    line-height: 1.65;
+    max-width: 680px;
+
+    opacity: 0.85;
+
+    /* INI KUNCI BALANCE */
+    text-wrap: balance;
+    word-break: normal;
+    hyphens: auto;
+
+    /* sejajarkan secara visual */
+    margin-left: 0;
+}
 
         /* ===== ELEGANT BUTTONS ===== */
         .btn {
@@ -585,110 +854,12 @@
             background: var(--border);
         }
 
-        /* ===== HERO SECTION (PERFECTLY FITTED) ===== */
-        .hero {
-            min-height: 100vh;
-            min-height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            background: 
-                linear-gradient(135deg, rgba(249, 247, 242, 0.97) 0%, rgba(245, 241, 232, 0.95) 100%),
-                url('https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1935&q=80');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
-            transition: var(--theme-transition);
-        }
-
-        .dark-mode .hero {
-            background: 
-                linear-gradient(135deg, rgba(15, 14, 12, 0.95) 0%, rgba(26, 24, 20, 0.97) 100%),
-                url('https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1935&q=80');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 30%, rgba(var(--accent-rgb), 0.03) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            max-width: min(900px, 90vw);
-            position: relative;
-            z-index: 2;
-            width: 100%;
-        }
-
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: calc(clamp(2.5rem, 6vw, 5.5rem) * var(--phi));
-            line-height: 1.1;
-            margin-bottom: clamp(1rem, 2vw, 2rem);
-            position: relative;
-            width: 100%;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            transition: var(--theme-transition);
-        }
-
-        .hero-title span {
-            color: var(--hero-rupa);
-            position: relative;
-            display: inline-block;
-            transition: var(--theme-transition);
-        }
-
-        .hero-title span::after {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 0;
-            width: 100%;
-            height: clamp(0.5rem, 1vw, 0.5rem);
-            background: rgba(var(--accent-rgb), 0.15);
-            z-index: -1;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1rem, 1.4vw, 1.4rem);
-            color: var(--text-light);
-            margin-bottom: clamp(1.5rem, 3vw, 3rem);
-            max-width: min(650px, 90vw);
-            font-weight: 400;
-            line-height: var(--phi);
-            transition: var(--theme-transition);
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: clamp(0.75rem, 1.5vw, 1.25rem);
-            margin-top: clamp(1.5rem, 3vw, 3rem);
-            flex-wrap: wrap;
-            width: 100%;
-        }
-
         /* ===== VIDEO SECTION ===== */
         .video-section {
             background: var(--bg-secondary);
             position: relative;
             width: 100%;
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         .video-wrapper {
@@ -727,15 +898,14 @@
             border: 0;
         }
 
-        /* ===== ADVANCED TEAM SECTION ===== */
+        /* ===== TEAM SECTION WITH 4:5 RATIO IMAGES ===== */
         .team-section {
             background: var(--bg);
             position: relative;
-            transition: var(--theme-transition);
-            overflow: hidden;
+            transition: var(--transition-theme);
         }
 
-        .team-section::before {
+        .dark-mode .team-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -743,346 +913,232 @@
             right: 0;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--border), transparent);
-            transition: var(--theme-transition);
         }
 
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
-            gap: clamp(2rem, 3vw, 3rem);
-            margin-top: clamp(2rem, 4vw, 4rem);
+            gap: clamp(1.5rem, 2.5vw, 2.5rem);
+            margin-top: clamp(1.5rem, 3vw, 3rem);
             width: 100%;
         }
 
-        /* ADVANCED TEAM CARD dengan animasi glass */
         .team-card {
-            background: transparent;
-            border-radius: 12px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 20px 60px var(--shadow);
-            transition: var(--card-content-transition);
+            box-shadow: 0 15px 40px var(--shadow);
+            transition: var(--transition-slow);
             position: relative;
+            border: 1px solid var(--border);
             width: 100%;
-            height: 600px;
-            perspective: 1000px;
-            transform-style: preserve-3d;
+            height: auto;
+            min-height: 520px;
         }
 
         .team-card:hover {
-            transform: translateY(-20px) rotateX(5deg);
-            box-shadow: 0 40px 80px var(--shadow-hover);
+            transform: translateY(-15px) rotateX(2deg);
+            box-shadow: 0 25px 60px var(--shadow-hover);
+            border-color: var(--accent);
         }
 
         .dark-mode .team-card {
-            box-shadow: 0 20px 60px var(--shadow),
+            box-shadow: 0 15px 40px var(--shadow),
                         0 0 0 1px var(--border);
         }
 
         .dark-mode .team-card:hover {
-            box-shadow: 0 40px 80px var(--shadow-hover),
+            box-shadow: 0 25px 60px var(--shadow-hover),
                         0 0 0 1px var(--accent),
-                        0 0 40px var(--glow);
+                        0 0 30px var(--glow);
         }
 
-        /* TEAM CARD IMAGE dengan fixed aspect ratio */
+        /* 4:5 RATIO FOR TEAM IMAGES */
         .team-card-image {
-            position: absolute;
-            top: 0;
-            left: 0;
+            position: relative;
             width: 100%;
-            height: 100%;
+            padding-top: 125%; /* 4:5 ratio (5/4 = 1.25 = 125%) */
             overflow: hidden;
-            border-radius: 12px;
-            z-index: 1;
+            border-bottom: 1px solid var(--border);
         }
 
-        .team-card-image::before {
+        .dark-mode .team-card-image::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, 
-                transparent 40%, 
-                rgba(0, 0, 0, 0.1) 60%, 
-                rgba(0, 0, 0, 0.3) 80%);
-            z-index: 2;
-            transition: var(--card-content-transition);
-        }
-
-        .dark-mode .team-card-image::before {
-            background: linear-gradient(to bottom, 
-                transparent 40%, 
-                rgba(0, 0, 0, 0.3) 60%, 
-                rgba(0, 0, 0, 0.6) 80%);
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 60%, rgba(15, 14, 12, 0.8));
+            pointer-events: none;
+            z-index: 1;
         }
 
         .team-card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
-            filter: brightness(0.95);
-        }
-
-        .dark-mode .team-card-image img {
-            filter: brightness(0.85) contrast(1.1);
-        }
-
-        .team-card:hover .team-card-image img {
-            transform: scale(1.1);
-            filter: brightness(1);
-        }
-
-        /* TEAM CARD CONTENT (GLASS STYLE) - Hidden Awalnya */
-        .team-card-content {
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
-            right: 0;
-            padding: clamp(1.5rem, 2.5vw, 2.5rem);
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-top: 1px solid var(--glass-border);
-            border-radius: 0 0 12px 12px;
-            transform: translateY(100%);
-            opacity: 0;
-            transition: var(--card-content-transition);
-            z-index: 3;
-            box-shadow: var(--glass-shadow);
-            height: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-
-        .team-card:hover .team-card-content {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        /* Efek gradient untuk setiap tema */
-        .team-card.theme-1 .team-card-content {
-            background: linear-gradient(
-                to top,
-                rgba(179, 139, 89, 0.9) 0%,
-                rgba(179, 139, 89, 0.7) 30%,
-                rgba(179, 139, 89, 0.4) 100%
-            );
-            backdrop-filter: blur(15px);
-        }
-
-        .team-card.theme-2 .team-card-content {
-            background: linear-gradient(
-                to top,
-                rgba(90, 125, 154, 0.9) 0%,
-                rgba(90, 125, 154, 0.7) 30%,
-                rgba(90, 125, 154, 0.4) 100%
-            );
-            backdrop-filter: blur(15px);
-        }
-
-        .team-card.theme-3 .team-card-content {
-            background: linear-gradient(
-                to top,
-                rgba(154, 90, 125, 0.9) 0%,
-                rgba(154, 90, 125, 0.7) 30%,
-                rgba(154, 90, 125, 0.4) 100%
-            );
-            backdrop-filter: blur(15px);
-        }
-
-        .dark-mode .team-card.theme-1 .team-card-content {
-            background: linear-gradient(
-                to top,
-                rgba(26, 24, 20, 0.95) 0%,
-                rgba(179, 139, 89, 0.6) 30%,
-                rgba(179, 139, 89, 0.3) 100%
-            );
-        }
-
-        .dark-mode .team-card.theme-2 .team-card-content {
-            background: linear-gradient(
-                to top,
-                rgba(26, 24, 20, 0.95) 0%,
-                rgba(90, 125, 154, 0.6) 30%,
-                rgba(90, 125, 154, 0.3) 100%
-            );
-        }
-
-        .dark-mode .team-card.theme-3 .team-card-content {
-            background: linear-gradient(
-                to top,
-                rgba(26, 24, 20, 0.95) 0%,
-                rgba(154, 90, 125, 0.6) 30%,
-                rgba(154, 90, 125, 0.3) 100%
-            );
-        }
-
-        .team-card-name {
-            font-size: clamp(1.5rem, 2vw, 2rem);
-            margin-bottom: 0.5rem;
-            color: white;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .team-card-role {
-            color: rgba(255, 255, 255, 0.9);
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: clamp(0.9rem, 1.1vw, 1.1rem);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 0.75rem;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            display: inline-block;
-            backdrop-filter: blur(10px);
-        }
-
-        .team-card-class {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 4px;
-            font-size: clamp(0.8rem, 0.95vw, 0.95rem);
-            margin-bottom: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .team-card-quote {
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: clamp(1rem, 1.1vw, 1.1rem);
-            line-height: 1.6;
-            border-left: 3px solid rgba(255, 255, 255, 0.5);
-            padding-left: 1rem;
-            margin-top: 1rem;
-            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        /* ===== SMART GALLERY WITH AUTO-LAYOUT ===== */
-        .gallery-section {
-            background: var(--bg-secondary);
-            transition: var(--theme-transition);
-        }
-
-        .gallery-container {
-            margin-top: clamp(2rem, 4vw, 4rem);
-            width: 100%;
-        }
-
-        /* SMART MASONRY GRID yang menganalisa space */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            grid-auto-rows: 200px;
-            gap: clamp(1.5rem, 2.5vw, 2.5rem);
-            grid-auto-flow: dense;
-            width: 100%;
-        }
-
-        /* Smart aspect ratio handling - gambar selalu maintain aspect ratio */
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px var(--shadow);
-            transition: var(--transition-slow);
-            border: 1px solid var(--border);
-            grid-column: span 1;
-            grid-row: span 1;
-            min-height: 200px;
-            background: var(--bg-tertiary);
-            display: block;
-        }
-
-        /* AI-like smart sizing berdasarkan perkiraan aspect ratio */
-        .gallery-item.portrait {
-            grid-row: span 2;
-        }
-
-        .gallery-item.landscape {
-            grid-column: span 2;
-        }
-
-        .gallery-item.square {
-            grid-row: span 1;
-            grid-column: span 1;
-        }
-
-        .gallery-item.ultrawide {
-            grid-column: span 3;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 40px 80px var(--shadow-hover);
-            border-color: var(--accent);
-            z-index: 10;
-        }
-
-        .dark-mode .gallery-item {
-            box-shadow: 0 20px 60px var(--shadow),
-                        0 0 0 1px var(--border);
-        }
-
-        .dark-mode .gallery-item:hover {
-            box-shadow: 0 40px 80px var(--shadow-hover),
-                        0 0 0 1px var(--accent),
-                        0 0 40px var(--glow);
-        }
-
-        /* IMAGE CONTAINER yang menjaga aspect ratio */
-        .gallery-image-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .gallery-image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-            display: block;
+            object-position: center 20%;
         }
 
-        .dark-mode .gallery-image-container img {
-            filter: brightness(0.85) contrast(1.1);
+        .dark-mode .team-card-image img {
+            filter: brightness(0.9) contrast(1.1);
         }
 
-        .gallery-item:hover .gallery-image-container img {
-            transform: scale(1.1);
+        .team-card:hover .team-card-image img {
+            transform: scale(1.08);
         }
 
-        .dark-mode .gallery-item:hover .gallery-image-container img {
+        .dark-mode .team-card:hover .team-card-image img {
             filter: brightness(1) contrast(1);
         }
 
-        /* Gallery Overlay */
+        .team-card-content {
+            padding: clamp(1.25rem, 2vw, 1.75rem);
+            position: relative;
+            width: 100%;
+        }
+
+        .team-card-name {
+            font-size: clamp(1.3rem, 1.8vw, 1.6rem);
+            margin-bottom: 0.25rem;
+            color: var(--text);
+            transition: var(--transition-theme);
+        }
+
+        .team-card-role {
+            color: var(--accent);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: clamp(0.8rem, 0.95vw, 0.95rem);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            transition: var(--transition-theme);
+        }
+
+        .team-card-class {
+            display: inline-block;
+            background: rgba(179, 139, 89, 0.1);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 2px;
+            font-size: clamp(0.75rem, 0.85vw, 0.85rem);
+            margin-bottom: 0.75rem;
+            border: 1px solid rgba(179, 139, 89, 0.2);
+            transition: var(--transition-theme);
+        }
+
+        .team-card-quote {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: clamp(0.9rem, 1vw, 1rem);
+            line-height: 1.6;
+            border-left: 2px solid var(--border);
+            padding-left: 0.75rem;
+            margin-top: 0.75rem;
+            transition: var(--transition-theme);
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery-section {
+            background: var(--bg-secondary);
+            transition: var(--transition-theme);
+        }
+
+        .gallery-container {
+            margin-top: clamp(1.5rem, 3vw, 3rem);
+            width: 100%;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 200px;
+            gap: clamp(1rem, 2vw, 2rem);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .gallery-item:nth-child(3n+1) {
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(3n+2) {
+            grid-column: span 1;
+        }
+
+        .gallery-item:nth-child(3n+3) {
+            grid-column: span 1;
+        }
+
+        .gallery-item-tall {
+            grid-row: span 2;
+        }
+
+        .gallery-item-wide {
+            grid-column: span 2;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 60px var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .dark-mode .gallery-item {
+            box-shadow: 0 15px 40px var(--shadow),
+                        0 0 0 1px var(--border);
+        }
+
+        .dark-mode .gallery-item:hover {
+            box-shadow: 0 25px 60px var(--shadow-hover),
+                        0 0 0 1px var(--accent),
+                        0 0 30px var(--glow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .dark-mode .gallery-item img {
+            filter: brightness(0.85) contrast(1.1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .dark-mode .gallery-item:hover img {
+            filter: brightness(1) contrast(1);
+        }
+
         .gallery-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
             color: white;
-            padding: clamp(1.5rem, 2.5vw, 2.5rem);
+            padding: clamp(1rem, 2vw, 1.875rem);
             transform: translateY(20px);
             opacity: 0;
-            transition: var(--transition-slow);
+            transition: var(--transition);
             width: 100%;
-            backdrop-filter: blur(10px);
-            box-sizing: border-box;
         }
 
         .dark-mode .gallery-overlay {
@@ -1095,222 +1151,62 @@
         }
 
         .gallery-title {
-            font-size: clamp(1.2rem, 1.5vw, 1.5rem);
-            margin-bottom: 0.5rem;
+            font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+            margin-bottom: 0.25rem;
             color: white;
-            font-weight: 600;
         }
 
         .gallery-description {
             color: rgba(255, 255, 255, 0.8);
-            font-size: clamp(0.9rem, 1vw, 1rem);
-            line-height: 1.6;
-        }
-
-        /* Gallery Controls */
-        .gallery-controls {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .gallery-filter {
-            padding: 0.75rem 1.5rem;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            color: var(--text-light);
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.9rem;
-            border: none;
-            outline: none;
-        }
-
-        .gallery-filter:hover,
-        .gallery-filter.active {
-            background: var(--accent);
-            color: var(--bg);
-            border-color: var(--accent);
-        }
-
-        /* ===== PARTNER SECTION dengan CAROUSEL ===== */
-        .partner-section {
-            background: var(--bg);
-            position: relative;
-            transition: var(--theme-transition);
-            overflow: hidden;
-        }
-
-        /* Swiper Custom Styles */
-        .partner-carousel {
-            width: 100%;
-            padding: 2rem 0 4rem 0;
-            margin-top: clamp(1rem, 3vw, 3rem);
-        }
-
-        .partner-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 180px;
-            padding: 2rem;
-            background: var(--bg-tertiary);
-            border-radius: 12px;
-            box-shadow: 0 15px 40px var(--shadow);
-            transition: var(--transition-slow);
-            border: 1px solid var(--border);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .partner-slide::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.1), transparent);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .partner-slide:hover::before {
-            opacity: 1;
-        }
-
-        .partner-slide:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 30px 60px var(--shadow-hover);
-            border-color: var(--accent);
-        }
-
-        .dark-mode .partner-slide {
-            box-shadow: 0 15px 40px var(--shadow),
-                        0 0 0 1px var(--border);
-        }
-
-        .dark-mode .partner-slide:hover {
-            box-shadow: 0 30px 60px var(--shadow-hover),
-                        0 0 0 1px var(--accent),
-                        0 0 30px var(--glow);
-        }
-
-        .partner-logo {
-            max-width: 80%;
-            max-height: 80px;
-            filter: grayscale(1) opacity(0.7);
-            transition: var(--transition-slow);
-            width: auto;
-            height: auto;
-            z-index: 1;
-        }
-
-        .dark-mode .partner-logo {
-            filter: grayscale(1) brightness(1.5) opacity(0.8);
-        }
-
-        .partner-slide:hover .partner-logo {
-            filter: grayscale(0) opacity(1) brightness(1.1);
-            transform: scale(1.1);
-        }
-
-        .dark-mode .partner-slide:hover .partner-logo {
-            filter: grayscale(0) brightness(2) opacity(1);
-        }
-
-        /* Swiper Navigation */
-        .partner-carousel .swiper-button-next,
-        .partner-carousel .swiper-button-prev {
-            color: var(--accent);
-            background: var(--bg-tertiary);
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            box-shadow: var(--glass-shadow);
-            border: 1px solid var(--border);
-            transition: var(--transition);
-            opacity: 0.8;
-        }
-
-        .partner-carousel .swiper-button-next:after,
-        .partner-carousel .swiper-button-prev:after {
-            font-size: 1.2rem;
-        }
-
-        .partner-carousel .swiper-button-next:hover,
-        .partner-carousel .swiper-button-prev:hover {
-            opacity: 1;
-            transform: scale(1.1);
-            background: var(--accent);
-            color: var(--bg);
-        }
-
-        .partner-carousel .swiper-pagination-bullet {
-            background: var(--border);
-            opacity: 0.5;
-            width: 10px;
-            height: 10px;
-            transition: var(--transition);
-        }
-
-        .partner-carousel .swiper-pagination-bullet-active {
-            background: var(--accent);
-            opacity: 1;
-            transform: scale(1.2);
+            font-size: clamp(0.8rem, 0.95vw, 0.95rem);
         }
 
         /* ===== CONTACT SECTION ===== */
         .contact-section {
             background: var(--bg-secondary);
             width: 100%;
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
-            gap: clamp(1.5rem, 3vw, 3rem);
-            margin-top: clamp(2rem, 4vw, 4rem);
+            grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+            gap: clamp(1rem, 2vw, 2.5rem);
+            margin-top: clamp(1.5rem, 3vw, 3rem);
             width: 100%;
         }
 
         .contact-card {
             background: var(--bg-tertiary);
-            padding: clamp(2rem, 3vw, 3rem);
-            border-radius: 12px;
-            box-shadow: 0 20px 60px var(--shadow);
-            transition: var(--transition-slow);
+            padding: clamp(1.5rem, 2.5vw, 2.5rem);
+            border-radius: 8px;
+            box-shadow: 0 15px 40px var(--shadow);
+            transition: var(--transition);
             border: 1px solid var(--border);
             height: 100%;
             position: relative;
             overflow: hidden;
             width: 100%;
-            min-height: 320px;
+            min-height: 300px;
             display: flex;
             flex-direction: column;
         }
 
         .contact-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 40px 80px var(--shadow-hover);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px var(--shadow-hover);
             border-color: var(--accent);
         }
 
         .dark-mode .contact-card {
-            box-shadow: 0 20px 60px var(--shadow),
+            box-shadow: 0 15px 40px var(--shadow),
                         0 0 0 1px var(--border);
         }
 
         .dark-mode .contact-card:hover {
-            box-shadow: 0 40px 80px var(--shadow-hover),
+            box-shadow: 0 25px 60px var(--shadow-hover),
                         0 0 0 1px var(--accent),
-                        0 0 40px var(--glow);
+                        0 0 30px var(--glow);
         }
 
         .contact-card::before {
@@ -1321,33 +1217,33 @@
             width: 100%;
             height: 4px;
             background: linear-gradient(90deg, var(--accent), var(--accent-dark));
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         .contact-icon {
-            font-size: clamp(2rem, 3vw, 3rem);
+            font-size: clamp(1.8rem, 2.5vw, 2.5rem);
             color: var(--accent);
-            margin-bottom: clamp(1.5rem, 2vw, 2rem);
-            transition: var(--theme-transition);
+            margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+            transition: var(--transition-theme);
         }
 
         .contact-title {
-            font-size: clamp(1.3rem, 1.8vw, 1.8rem);
-            margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+            font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+            margin-bottom: clamp(0.75rem, 1.25vw, 1.25rem);
             color: var(--text);
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         .contact-details {
             color: var(--text-light);
             line-height: 1.8;
-            font-size: clamp(1rem, 1.1vw, 1.1rem);
+            font-size: clamp(0.9rem, 1vw, 1rem);
             flex-grow: 1;
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         .contact-details p {
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             max-width: 100%;
         }
 
@@ -1355,19 +1251,71 @@
             color: var(--accent);
             font-weight: 600;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        /* ===== FOOTER LOGOS ===== */
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            margin: 3rem 0;
+        }
+
+        .footer-logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            transition: var(--transition);
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            min-width: 180px;
+        }
+
+        .footer-logo-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent);
+        }
+
+        .footer-logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(1) opacity(0.7);
+            transition: var(--transition);
+        }
+
+        .footer-logo-item:hover .footer-logo-img {
+            filter: grayscale(0) opacity(1);
+        }
+
+        .footer-logo-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-align: center;
+            max-width: 180px;
+            line-height: 1.5;
         }
 
         /* ===== FOOTER ===== */
         footer {
             background: var(--bg-tertiary);
             color: var(--text-light);
-            padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 3vw, 2rem) clamp(2rem, 4vw, 4rem);
+            padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 3vw, 2rem) clamp(1.5rem, 3vw, 3rem);
             position: relative;
             overflow: hidden;
             width: 100%;
             border-top: 1px solid var(--border);
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         .dark-mode footer {
@@ -1387,31 +1335,18 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
-            gap: clamp(2rem, 4vw, 4rem);
-            margin-bottom: clamp(3rem, 6vw, 6rem);
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+            gap: clamp(1.5rem, 3vw, 3rem);
+            margin-bottom: clamp(2rem, 4vw, 4rem);
             width: 100%;
         }
 
         .footer-logo {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 3vw, 3rem);
+            font-size: clamp(1.8rem, 2.5vw, 2.5rem);
             color: var(--text);
-            margin-bottom: clamp(1.5rem, 2vw, 2rem);
-            transition: var(--theme-transition);
-            position: relative;
-            display: inline-block;
-        }
-
-        .footer-logo::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), transparent);
-            transition: var(--theme-transition);
+            margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
+            transition: var(--transition-theme);
         }
 
         .footer-logo span {
@@ -1420,21 +1355,21 @@
 
         .footer-description {
             color: var(--text-muted);
-            margin-bottom: clamp(1.5rem, 2vw, 2rem);
-            font-size: clamp(1rem, 1.1vw, 1.1rem);
+            margin-bottom: clamp(1rem, 2vw, 2rem);
+            font-size: clamp(0.9rem, 1vw, 1rem);
             line-height: 1.7;
             max-width: 100%;
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         .footer-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+            font-size: clamp(1.2rem, 1.5vw, 1.5rem);
             color: var(--text);
-            margin-bottom: clamp(1.5rem, 2vw, 2rem);
+            margin-bottom: clamp(1rem, 1.5vw, 1.5rem);
             position: relative;
-            padding-bottom: 0.75rem;
-            transition: var(--theme-transition);
+            padding-bottom: 0.5rem;
+            transition: var(--transition-theme);
         }
 
         .footer-title::after {
@@ -1442,10 +1377,10 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: clamp(2.5rem, 4vw, 4rem);
-            height: 2px;
+            width: clamp(2rem, 3vw, 3rem);
+            height: 1px;
             background: linear-gradient(90deg, var(--accent), transparent);
-            transition: var(--theme-transition);
+            transition: var(--transition-theme);
         }
 
         .footer-links {
@@ -1454,7 +1389,7 @@
         }
 
         .footer-links li {
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             width: 100%;
         }
 
@@ -1462,23 +1397,21 @@
             color: var(--text-muted);
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
             transition: color 0.3s ease;
-            font-size: clamp(1rem, 1.1vw, 1.1rem);
+            font-size: clamp(0.9rem, 1vw, 1rem);
             width: 100%;
             word-wrap: break-word;
-            padding: 0.5rem 0;
         }
 
         .footer-links a:hover {
             color: var(--accent);
-            transform: translateX(10px);
         }
 
         .social-links {
             display: flex;
-            gap: 1rem;
-            margin-top: clamp(1.5rem, 2vw, 2rem);
+            gap: 0.75rem;
+            margin-top: clamp(1rem, 1.5vw, 1.5rem);
             flex-wrap: wrap;
         }
 
@@ -1486,54 +1419,32 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: clamp(3rem, 4vw, 4rem);
-            height: clamp(3rem, 4vw, 4rem);
+            width: clamp(2.5rem, 3vw, 3rem);
+            height: clamp(2.5rem, 3vw, 3rem);
             background: var(--bg-secondary);
             color: var(--text);
             border-radius: 50%;
-            transition: var(--transition-slow);
-            font-size: clamp(1.2rem, 1.5vw, 1.5rem);
-            border: 1px solid var(--border);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .social-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-            opacity: 0;
             transition: var(--transition);
-        }
-
-        .social-link:hover::before {
-            opacity: 1;
-        }
-
-        .social-link i {
-            position: relative;
-            z-index: 1;
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            border: 1px solid var(--border);
         }
 
         .social-link:hover {
+            background: var(--accent);
             color: var(--bg);
-            transform: translateY(-5px) scale(1.1);
+            transform: translateY(-3px);
             border-color: var(--accent);
         }
 
         .copyright {
             text-align: center;
-            font-size: clamp(0.85rem, 1vw, 1rem);
+            font-size: clamp(0.75rem, 0.9vw, 0.9rem);
             color: var(--text-muted);
-            padding-top: clamp(1.5rem, 3vw, 3rem);
+            padding-top: clamp(1rem, 2vw, 2rem);
             border-top: 1px solid var(--border);
             width: 100%;
-            line-height: 1.6;
-            transition: var(--theme-transition);
+            line-height: 1.5;
+            transition: var(--transition-theme);
         }
 
         /* ===== LOADING ANIMATION ===== */
@@ -1545,7 +1456,6 @@
             height: 100%;
             background: var(--bg);
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 9999;
@@ -1558,41 +1468,81 @@
         }
 
         .loader {
-            width: 80px;
-            height: 80px;
-            position: relative;
-            margin-bottom: 2rem;
-        }
-
-        .loader-inner {
-            width: 100%;
-            height: 100%;
-            border: 3px solid transparent;
+            width: 4rem;
+            height: 4rem;
+            border: 3px solid var(--border);
             border-top-color: var(--accent);
-            border-bottom-color: var(--accent);
             border-radius: 50%;
-            animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
-            transition: var(--theme-transition);
-        }
-
-        .loader-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--text);
-            opacity: 0.8;
-            margin-top: 1rem;
-            transition: var(--theme-transition);
+            animation: spin 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+            transition: var(--transition-theme);
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg) scale(1); }
-            50% { transform: rotate(180deg) scale(1.1); }
-            100% { transform: rotate(360deg) scale(1); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* ===== GLOWING ANIMATION ===== */
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(179, 139, 89, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(179, 139, 89, 0.6);
+            }
+        }
+
+        .glowing {
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
         }
 
         /* ===== CUSTOM SCROLLBAR ===== */
         ::-webkit-scrollbar {
-            width: 12px;
+            width: 10px;
         }
 
         ::-webkit-scrollbar-track {
@@ -1601,98 +1551,47 @@
 
         ::-webkit-scrollbar-thumb {
             background: var(--border);
-            border-radius: 6px;
-            transition: var(--transition);
+            border-radius: 5px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent);
         }
 
-        /* ===== ANIMATION CLASSES ===== */
-        .fade-in {
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        .slide-up {
-            animation: slideUp 0.8s ease forwards;
-        }
-
-        .scale-in {
-            animation: scaleIn 0.8s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes scaleIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        /* ===== IMAGE FALLBACK STYLES ===== */
-        .image-fallback {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--accent-light), var(--accent));
-            color: white;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            text-align: center;
-            padding: 2rem;
-        }
-
         /* ===== RESPONSIVE DESIGN ===== */
-        @media screen and (max-width: 1200px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                grid-auto-rows: 180px;
+        @media screen and (max-width: 1024px) {
+            .hero-title {
+                font-size: clamp(2.2rem, 5vw, 4rem);
             }
             
-            .team-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            .logo-item {
+                min-width: 180px;
+                padding: 1rem;
             }
             
-            .gallery-item.ultrawide {
-                grid-column: span 2;
-            }
-        }
-
-        @media screen and (max-width: 992px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-                grid-auto-rows: 160px;
+            .sponsor-item {
+                width: 180px;
+                height: 135px;
             }
             
-            .team-card {
-                height: 550px;
-            }
-            
-            .theme-selector {
-                width: 280px;
-                right: 20px;
-            }
-            
-            .gallery-item.landscape,
-            .gallery-item.ultrawide {
-                grid-column: span 1;
+            @keyframes marquee-scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-180px * 7));
+                }
             }
         }
 
         @media screen and (max-width: 768px) {
+            .hero {
+                padding: 1.5rem;
+            }
+            
             .hero-cta {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
             }
             
             .btn {
@@ -1706,12 +1605,11 @@
             
             .team-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
             
             .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                grid-auto-rows: 140px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-auto-rows: 150px;
             }
             
             .theme-switcher {
@@ -1721,41 +1619,64 @@
             }
             
             .theme-toggle {
-                width: 42px;
-                height: 42px;
+                width: 36px;
+                height: 36px;
             }
             
-            .theme-selector {
-                width: 260px;
-                right: 15px;
-                top: 90px;
+            .logo-container {
+                gap: 1rem;
+                flex-direction: column;
+                align-items: center;
             }
             
-            .team-card {
-                height: 500px;
+            .logo-item {
+                min-width: 250px;
+                max-width: 300px;
             }
             
-            .partner-slide {
-                height: 150px;
-                padding: 1.5rem;
+            .footer-logos {
+                gap: 1.5rem;
+                flex-direction: column;
             }
             
-            .partner-logo {
-                max-height: 60px;
+            .footer-logo-item {
+                min-width: 200px;
+            }
+            
+            .countdown-item {
+                min-width: 100px;
+            }
+            
+            .dot-navigation {
+                display: none;
+            }
+            
+            .sponsor-item {
+                width: 150px;
+                height: 112px;
+            }
+            
+            @keyframes marquee-scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-150px * 7));
+                }
             }
         }
 
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 480px) {
             h1 {
-                font-size: calc(2.2rem * var(--phi));
+                font-size: clamp(2rem, 6vw, 2.8rem);
             }
             
             h2 {
-                font-size: calc(1.8rem * var(--phi));
+                font-size: clamp(1.6rem, 5vw, 2.2rem);
             }
             
             .hero-title {
-                font-size: calc(2rem * var(--phi));
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
             }
             
             .gallery-grid {
@@ -1777,17 +1698,35 @@
                 right: 15px;
             }
             
-            .team-card {
-                height: 450px;
+            .countdown-container {
+                gap: 0.5rem;
             }
             
-            .partner-carousel .swiper-button-next,
-            .partner-carousel .swiper-button-prev {
-                display: none;
+            .countdown-item {
+                min-width: 80px;
+                padding: 1rem 0.5rem;
+            }
+            
+            .countdown-number {
+                font-size: clamp(2rem, 3vw, 2.5rem);
+            }
+            
+            .sponsor-item {
+                width: 120px;
+                height: 90px;
+            }
+            
+            @keyframes marquee-scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-120px * 7));
+                }
             }
         }
 
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 320px) {
             html {
                 font-size: 14px;
             }
@@ -1797,7 +1736,7 @@
             }
             
             .hero-title {
-                font-size: calc(1.8rem * var(--phi));
+                font-size: clamp(1.6rem, 5vw, 2rem);
             }
             
             .gallery-grid {
@@ -1805,21 +1744,55 @@
             }
             
             .team-card {
-                height: 400px;
+                min-height: 500px;
             }
             
-            .theme-selector {
-                width: 240px;
-                padding: 15px;
+            .logo-container {
+                flex-direction: column;
+                align-items: center;
             }
             
-            .partner-slide {
-                height: 120px;
-                padding: 1rem;
+            .footer-logos {
+                flex-direction: column;
             }
             
-            .partner-logo {
-                max-height: 50px;
+            .sponsor-item {
+                width: 100px;
+                height: 75px;
+            }
+        }
+
+        @media screen and (max-height: 600px) and (orientation: landscape) {
+            .hero {
+                padding: 2rem;
+                min-height: auto;
+            }
+            
+            .hero-title {
+                font-size: clamp(2rem, 5vw, 3rem);
+                margin-bottom: 0.5rem;
+            }
+            
+            .hero-subtitle {
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .logo-container {
+                margin-bottom: 1rem;
+            }
+            
+            .logo-item {
+                padding: 0.5rem;
+                min-width: 120px;
+            }
+            
+            .logo-img {
+                height: 40px;
+            }
+            
+            .sponsor-section {
+                padding: 2rem 1rem;
             }
         }
 
@@ -1828,25 +1801,24 @@
             .theme-switcher,
             .loading-screen,
             .btn::before,
-            .team-card-content,
+            .team-card-image::after,
             .gallery-overlay,
-            .theme-selector,
-            .partner-carousel .swiper-button-next,
-            .partner-carousel .swiper-button-prev,
-            .partner-carousel .swiper-pagination {
+            .dot-navigation,
+            .hero-background,
+            .hero-overlay {
                 display: none !important;
             }
             
             .team-card,
-            .contact-card,
-            .partner-slide {
+            .contact-card {
                 break-inside: avoid;
                 box-shadow: none !important;
                 border: 1px solid #ccc !important;
             }
             
-            .team-card-image img {
-                filter: none !important;
+            .hero {
+                min-height: auto;
+                padding: 2rem 1rem;
             }
         }
     </style>
@@ -1855,13 +1827,13 @@
     
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
-        <div class="loader">
-            <div class="loader-inner"></div>
-        </div>
-        <div class="loader-logo">Kala Rupa</div>
+        <div class="loader"></div>
     </div>
 
-    <!-- Advanced Theme Switcher -->
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Elegant Theme Toggle -->
     <div class="theme-switcher" id="themeSwitcher">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
             <i class="fas fa-sun"></i>
@@ -1869,54 +1841,175 @@
         </button>
     </div>
 
-    <!-- Theme Selector Panel -->
-    <div class="theme-selector" id="themeSelector">
-        <div class="theme-selector-header">
-            <h3 class="theme-selector-title">Pilih Tema</h3>
-            <button class="theme-close" id="themeClose">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="theme-options">
-            <div class="theme-option theme-1 active" data-theme="1">
-                <div class="theme-preview"></div>
-                <div class="theme-label">Classic Gold</div>
-            </div>
-            <div class="theme-option theme-2" data-theme="2">
-                <div class="theme-preview"></div>
-                <div class="theme-label">Ocean Blue</div>
-            </div>
-            <div class="theme-option theme-3" data-theme="3">
-                <div class="theme-preview"></div>
-                <div class="theme-label">Royal Purple</div>
-            </div>
-        </div>
-        <p style="color: var(--text-light); font-size: 0.9rem; text-align: center;">
-            Tema akan diterapkan ke seluruh elemen website termasuk team cards
-        </p>
+    <!-- Dot Navigation -->
+    <div class="dot-navigation" id="dotNavigation">
+        <div class="dot-item active" data-section="Home" data-target="hero"></div>
+        <div class="dot-item" data-section="Sponsor" data-target="sponsor"></div>
+        <div class="dot-item" data-section="Countdown" data-target="countdown"></div>
+        <div class="dot-item" data-section="Trailer" data-target="teaser"></div>
+        <div class="dot-item" data-section="Team" data-target="team"></div>
+        <div class="dot-item" data-section="Gallery" data-target="gallery"></div>
+        <div class="dot-item" data-section="Contact" data-target="contact"></div>
     </div>
 
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
         <div class="container">
-            <div class="hero-content" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-out-cubic">
-                <span class="section-subtitle">SMAS Brawijaya Smart School</span>
-                <h1 class="hero-title text-balance">Kala <span>Rupa</span><br/>Production</h1>
-                <p class="hero-subtitle text-balance">
+            <!-- Logo Container -->
+            <div class="logo-container" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+                <div class="logo-item fade-in-up" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/image/KalaRupa.png" alt="Kala Rupa Production Logo" class="logo-img">
+                    <div class="logo-text">Kala Rupa Production</div>
+                </div>
+                <div class="logo-item fade-in-up" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/image/MicroHelix Tech Solutions.png" alt="PT. MicroHelix Tech Solutions Logo" class="logo-img">
+                    <div class="logo-text">PT. MicroHelix Tech Solutions</div>
+                </div>
+                <div class="logo-item fade-in-up" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/image/BSS.png" alt="SMA BSS Logo" class="logo-img">
+                    <div class="logo-text">SMAS Brawijaya Smart School</div>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <span class="section-subtitle fade-in-left" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">SMAS Brawijaya Smart School</span>
+                <h1 class="hero-title  fade-in-up" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    Kala <span>Rupa</span><br/>Production
+                </h1>
+                <p class="hero-subtitle  fade-in-up" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                     Sebuah Production House elegan yang mengkhususkan diri dalam pembuatan film dan short movie dengan pendekatan visual sinematik berkualitas tinggi. 
                     Sebagai bagian integral dari ekosistem pendidikan <strong>SMAS Brawijaya Smart School</strong>, kami memadukan keunggulan akademis dengan kreativitas sinematik yang visioner.
                 </p>
                 <div class="hero-cta">
-                    <a href="#teaser" class="btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="ease-out-back">
+                    <a href="#countdown" class="btn glowing fade-in-right" 
+                       data-aos="fade-right" 
+                       data-aos-duration="800" 
+                       data-aos-delay="700"
+                       data-aos-easing="ease-out-back">
+                        <i class="fas fa-clock"></i> Countdown Penayangan
+                    </a>
+                    <a href="#teaser" class="btn fade-in-left" 
+                       data-aos="fade-left" 
+                       data-aos-duration="800" 
+                       data-aos-delay="700"
+                       data-aos-easing="ease-out-back">
                         <i class="fas fa-play-circle"></i> Jelajahi Karya Kami
                     </a>
-                    <a href="#contact" class="btn btn-secondary" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-easing="ease-out-back">
-                        <i class="fas fa-envelope"></i> Hubungi Kami
-                    </a>
-                    <button class="btn btn-secondary" id="openThemeSelector" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-easing="ease-out-back">
-                        <i class="fas fa-palette"></i> Pilih Tema
-                    </button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSOR SECTION WITH MARQUEE & 4:3 RATIO -->
+    <section id="sponsor" class="sponsor-section">
+        <div class="sponsor-content">
+            <div class="section-header" 
+                 data-aos="fade-up" 
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-out-cubic">
+                <span class="section-subtitle">Dukungan & Kolaborasi</span>
+                <h2 class="section-title">Sponsor & Mitra</h2>
+                <p class="section-description ">Perusahaan dan organisasi terkemuka yang mendukung visi dan karya Kala Rupa Production dalam menciptakan film-film berkualitas.</p>
+            </div>
+            
+            <div class="sponsor-marquee" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                <div class="sponsor-marquee-track">
+                    <!-- Sponsor Items (4:3 ratio) -->
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Sony&bg=ffffff" alt="Sony" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942536900-b6a6f50e8816?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Canon&bg=ffffff" alt="Canon" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942536969-4d4b1c6c41c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Adobe&bg=ffffff" alt="Adobe" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Red&bg=ffffff" alt="Red Cinema" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942536900-b6a6f50e8816?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Apple&bg=ffffff" alt="Apple" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942536969-4d4b1c6c41c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=DJI&bg=ffffff" alt="DJI" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Panasonic&bg=ffffff" alt="Panasonic" class="sponsor-img">
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Sony&bg=ffffff" alt="Sony" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942536900-b6a6f50e8816?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Canon&bg=ffffff" alt="Canon" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942536969-4d4b1c6c41c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Adobe&bg=ffffff" alt="Adobe" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Red&bg=ffffff" alt="Red Cinema" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942536900-b6a6f50e8816?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Apple&bg=ffffff" alt="Apple" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942536969-4d4b1c6c41c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=DJI&bg=ffffff" alt="DJI" class="sponsor-img">
+                    </div>
+                    <div class="sponsor-item">
+                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Panasonic&bg=ffffff" alt="Panasonic" class="sponsor-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+    <section id="countdown" class="countdown-section">
+        <div class="container">
+            <div class="countdown-title" data-aos="zoom-out" data-aos-duration="1000">
+                <h2>Penayangan Perdana</h2>
+                <p class="countdown-subtitle">Karya terbaru Kala Rupa Production akan tayang perdana di Malang Creative Center. Saksikan momen bersejarah ini!</p>
+            </div>
+            
+            <div class="countdown-container">
+                <div class="countdown-item" 
+                     data-aos="flip-up" 
+                     data-aos-duration="800" 
+                     data-aos-delay="100">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Hari</div>
+                </div>
+                <div class="countdown-item" 
+                     data-aos="flip-up" 
+                     data-aos-duration="800" 
+                     data-aos-delay="200">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Jam</div>
+                </div>
+                <div class="countdown-item" 
+                     data-aos="flip-up" 
+                     data-aos-duration="800" 
+                     data-aos-delay="300">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Menit</div>
+                </div>
+                <div class="countdown-item" 
+                     data-aos="flip-up" 
+                     data-aos-duration="800" 
+                     data-aos-delay="400">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Detik</div>
+                </div>
+            </div>
+            
+            <div class="countdown-info" 
+                 data-aos="fade-up" 
+                 data-aos-duration="1000" 
+                 data-aos-delay="500">
+                <div class="countdown-location">Malang Creative Center</div>
+                <div class="countdown-date">30 April 2026 | 19:00 WIB</div>
             </div>
         </div>
     </section>
@@ -1924,271 +2017,177 @@
     <!-- TEASER SECTION -->
     <section id="teaser" class="video-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+            <div class="section-header" 
+                 data-aos="fade-down" 
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-out-cubic">
                 <span class="section-subtitle">Masterpiece Terbaru</span>
                 <h2 class="section-title">Teaser & Trailer</h2>
                 <p class="section-description">Sebuah visual storytelling yang merepresentasikan visi, dedikasi, dan keahlian Kala Rupa Production dalam setiap frame yang penuh makna.</p>
             </div>
-            <div class="video-wrapper" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200" data-aos-easing="ease-out-cubic">
+            <div class="video-wrapper" 
+                 data-aos="zoom-in" 
+                 data-aos-duration="1200" 
+                 data-aos-delay="200"
+                 data-aos-easing="ease-out-cubic">
                 <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
-    <!-- TEAM SECTION -->
-    <section class="team-section">
+    <!-- TEAM SECTION WITH 4:5 RATIO IMAGES -->
+    <section id="team" class="team-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+            <div class="section-header" 
+                 data-aos="fade-right" 
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-out-cubic">
                 <span class="section-subtitle">Para Visioner</span>
                 <h2 class="section-title">Cast & Crew</h2>
-                <p class="section-description text-balance">Tim siswa-siswi berbakat SMAS Brawijaya Smart School yang menghidupkan setiap proyek film dengan semangat, dedikasi, dan kreativitas tanpa batas.</p>
+                <p class="section-description ">Tim siswa-siswi berbakat SMAS Brawijaya Smart School yang menghidupkan setiap proyek film dengan semangat, dedikasi, dan kreativitas tanpa batas.</p>
             </div>
             
             <div class="team-grid">
-                <!-- Team Member 1 (Theme 1) -->
-                <div class="team-card theme-1" data-aos="flip-left" data-aos-duration="800" data-aos-delay="100" data-aos-easing="ease-out-cubic">
+                <!-- Team Member 1 - 4:5 ratio image -->
+                <div class="team-card" 
+                     data-aos="fade-up" 
+                     data-aos-duration="800" 
+                     data-aos-delay="100"
+                     data-aos-easing="ease-out-cubic">
                     <div class="team-card-image">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Putri Amanda Sari - Pemeran Utama" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 1000\"><rect width=\"800\" height=\"1000\" fill=\"%23b38b59\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Putri Amanda</text></svg>'" />
+                        <img src="assets/image/cast&crew/1750419098696 - XI 6_Bramantyo Aji Miarso.jpg" alt="Bramantyo Aji Miarso" loading="lazy" />
                     </div>
                     <div class="team-card-content">
-                        <h3 class="team-card-name">Putri Amanda Sari</h3>
-                        <div class="team-card-role">Pemeran Utama</div>
+                        <h3 class="team-card-name">Bramantyo Aji Miarso</h3>
+                        <div class="team-card-role">Pimpinan Produksi</div>
                         <div class="team-card-class">Kelas XI IPA 2</div>
-                        <p class="team-card-quote text-balance">"Seni bukan hanya tentang menciptakan keindahan, tetapi tentang menyampaikan kebenaran yang tersembunyi di balik setiap cerita."</p>
+                        <p class="team-card-quote ">"Seni bukan hanya tentang menciptakan keindahan, tetapi tentang menyampaikan kebenaran yang tersembunyi di balik setiap cerita."</p>
                     </div>
                 </div>
                 
-                <!-- Team Member 2 (Theme 2) -->
-                <div class="team-card theme-2" data-aos="flip-left" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-out-cubic">
+                <!-- Team Member 2 - 4:5 ratio image -->
+                <div class="team-card" 
+                     data-aos="fade-up" 
+                     data-aos-duration="800" 
+                     data-aos-delay="200"
+                     data-aos-easing="ease-out-cubic">
                     <div class="team-card-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Rizky Maulana Putra - Sutradara & Produser" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 1000\"><rect width=\"800\" height=\"1000\" fill=\"%235a7d9a\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Rizky Maulana</text></svg>'" />
+                        <img src="assets/image/cast&crew/92d667605498b2b09c54b949eecdbc9e_0(1) - xi6 camellia lira putri w.jpg" alt="Rizky Maulana Putra" loading="lazy" />
                     </div>
                     <div class="team-card-content">
                         <h3 class="team-card-name">Rizky Maulana Putra</h3>
                         <div class="team-card-role">Sutradara & Produser</div>
                         <div class="team-card-class">Kelas XII IPS 1</div>
-                        <p class="team-card-quote text-balance">"Setiap cerita memiliki jiwa yang unik. Tugas kami adalah menemukan cara terbaik untuk membuatnya hidup di layar."</p>
+                        <p class="team-card-quote ">"Setiap cerita memiliki jiwa yang unik. Tugas kami adalah menemukan cara terbaik untuk membuatnya hidup di layar."</p>
                     </div>
                 </div>
                 
-                <!-- Team Member 3 (Theme 3) -->
-                <div class="team-card theme-3" data-aos="flip-left" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out-cubic">
+                <!-- Team Member 3 - 4:5 ratio image -->
+                <div class="team-card" 
+                     data-aos="fade-up" 
+                     data-aos-duration="800" 
+                     data-aos-delay="300"
+                     data-aos-easing="ease-out-cubic">
                     <div class="team-card-image">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Maya Sari Dewi - Sinematografer" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 1000\"><rect width=\"800\" height=\"1000\" fill=\"%239a5a7d\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Maya Sari</text></svg>'" />
+                        <img src="assets/image/cast&crew/CA7EADBE-11B3-4AB5-AC97-37D4799023F1 - Xl-6_Aqila Alya A..jpeg" alt="Maya Sari Dewi" loading="lazy" />
                     </div>
                     <div class="team-card-content">
                         <h3 class="team-card-name">Maya Sari Dewi</h3>
                         <div class="team-card-role">Sinematografer</div>
                         <div class="team-card-class">Kelas XI IPA 3</div>
-                        <p class="team-card-quote text-balance">"Cahaya adalah bahasa universal visual storytelling. Setiap sudut dan bayangan bercerita lebih dari sekadar kata-kata."</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 4 (Theme 1) -->
-                <div class="team-card theme-1" data-aos="flip-left" data-aos-duration="800" data-aos-delay="250" data-aos-easing="ease-out-cubic">
-                    <div class="team-card-image">
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Ahmad Fauzi Rahman - Editor & Colorist" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 1000\"><rect width=\"800\" height=\"1000\" fill=\"%23b38b59\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Ahmad Fauzi</text></svg>'" />
-                    </div>
-                    <div class="team-card-content">
-                        <h3 class="team-card-name">Ahmad Fauzi Rahman</h3>
-                        <div class="team-card-role">Editor & Colorist</div>
-                        <div class="team-card-class">Kelas XII IPA 1</div>
-                        <p class="team-card-quote text-balance">"Warna adalah emosi yang divisualisasikan. Setiap tone dan gradasi membawa penonton masuk ke dalam dunia cerita."</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 5 (Theme 2) -->
-                <div class="team-card theme-2" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300" data-aos-easing="ease-out-cubic">
-                    <div class="team-card-image">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Dewi Anggraini - Penulis Skenario" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 1000\"><rect width=\"800\" height=\"1000\" fill=\"%235a7d9a\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Dewi Anggraini</text></svg>'" />
-                    </div>
-                    <div class="team-card-content">
-                        <h3 class="team-card-name">Dewi Anggraini</h3>
-                        <div class="team-card-role">Penulis Skenario</div>
-                        <div class="team-card-class">Kelas XI IPS 2</div>
-                        <p class="team-card-quote text-balance">"Kata-kata adalah fondasi, tetapi emosi adalah arsitektur yang membangun jembatan antara cerita dan penonton."</p>
-                    </div>
-                </div>
-
-                <!-- Team Member 6 (Theme 3) -->
-                <div class="team-card theme-3" data-aos="flip-left" data-aos-duration="800" data-aos-delay="350" data-aos-easing="ease-out-cubic">
-                    <div class="team-card-image">
-                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Siti Nurhaliza - Sound Designer" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 1000\"><rect width=\"800\" height=\"1000\" fill=\"%239a5a7d\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Siti Nurhaliza</text></svg>'" />
-                    </div>
-                    <div class="team-card-content">
-                        <h3 class="team-card-name">Siti Nurhaliza</h3>
-                        <div class="team-card-role">Sound Designer</div>
-                        <div class="team-card-class">Kelas X IPA 3</div>
-                        <p class="team-card-quote text-balance">"Suara adalah jiwa dari visual. Atmosfer yang tepat dapat mengubah gambar biasa menjadi pengalaman yang mendalam."</p>
+                        <p class="team-card-quote ">"Cahaya adalah bahasa universal visual storytelling. Setiap sudut dan bayangan bercerita lebih dari sekadar kata-kata."</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SMART GALLERY SECTION -->
-    <section class="gallery-section">
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+            <div class="section-header" 
+                 data-aos="fade-left" 
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-out-cubic">
                 <span class="section-subtitle">Dokumentasi Visual</span>
                 <h2 class="section-title">Gallery</h2>
-                <p class="section-description text-balance">Momen-momen di balik layar yang menangkap esensi, semangat, dan dedikasi tim Kala Rupa Production dalam menciptakan karya sinematik.</p>
-            </div>
-            
-            <!-- Gallery Filters -->
-            <div class="gallery-controls" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                <button class="gallery-filter active" data-filter="all">Semua</button>
-                <button class="gallery-filter" data-filter="portrait">Portrait</button>
-                <button class="gallery-filter" data-filter="landscape">Landscape</button>
-                <button class="gallery-filter" data-filter="behind">Behind The Scene</button>
+                <p class="section-description ">Momen-momen di balik layar yang menangkap esensi, semangat, dan dedikasi tim Kala Rupa Production dalam menciptakan karya sinematik.</p>
             </div>
             
             <div class="gallery-container">
-                <div class="gallery-grid" id="smartGallery">
+                <div class="gallery-grid">
                     <!-- Portrait (9:16) -->
-                    <div class="gallery-item portrait" data-category="portrait" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-                        <div class="gallery-image-container">
-                            <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&h=1600&q=80" alt="Proses Syuting Portrait" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 1600\"><rect width=\"900\" height=\"1600\" fill=\"%23b38b59\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Proses Syuting</text></svg>'" />
-                        </div>
+                    <div class="gallery-item gallery-item-tall" 
+                         data-aos="zoom-in" 
+                         data-aos-duration="800" 
+                         data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&h=1600&q=80" alt="Proses Syuting Portrait" loading="lazy" />
                         <div class="gallery-overlay">
                             <h4 class="gallery-title">Proses Syuting</h4>
-                            <p class="gallery-description">Pengambilan gambar dengan kamera profesional dalam format portrait yang dramatis</p>
+                            <p class="gallery-description">Pengambilan gambar dengan kamera profesional</p>
                         </div>
                     </div>
                     
-                    <!-- Landscape (4:3) -->
-                    <div class="gallery-item landscape" data-category="landscape" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="150">
-                        <div class="gallery-image-container">
-                            <img src="https://images.unsplash.com/photo-1492684223066-e9e4aab4d25e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=900&q=80" alt="Brainstorming Kreatif" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 900\"><rect width=\"1200\" height=\"900\" fill=\"%235a7d9a\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Brainstorming Kreatif</text></svg>'" />
-                        </div>
+                    <!-- Landscape (4:3) stacked -->
+                    <div class="gallery-item" 
+                         data-aos="zoom-in" 
+                         data-aos-duration="800" 
+                         data-aos-delay="150">
+                        <img src="https://images.unsplash.com/photo-1492684223066-e9e4aab4d25e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=900&q=80" alt="Brainstorming Kreatif" loading="lazy" />
                         <div class="gallery-overlay">
                             <h4 class="gallery-title">Brainstorming Kreatif</h4>
-                            <p class="gallery-description">Diskusi pengembangan konsep cerita dengan tim kreatif</p>
+                            <p class="gallery-description">Diskusi pengembangan konsep cerita</p>
                         </div>
                     </div>
                     
-                    <!-- Landscape (4:3) -->
-                    <div class="gallery-item landscape" data-category="behind" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
-                        <div class="gallery-image-container">
-                            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=900&q=80" alt="Peralatan Produksi" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 900\"><rect width=\"1200\" height=\"900\" fill=\"%239a5a7d\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Peralatan Produksi</text></svg>'" />
-                        </div>
+                    <!-- Landscape (4:3) stacked -->
+                    <div class="gallery-item" 
+                         data-aos="zoom-in" 
+                         data-aos-duration="800" 
+                         data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=900&q=80" alt="Peralatan Produksi" loading="lazy" />
                         <div class="gallery-overlay">
                             <h4 class="gallery-title">Peralatan Produksi</h4>
-                            <p class="gallery-description">Teknologi dan alat-alat profesional untuk produksi film berkualitas</p>
+                            <p class="gallery-description">Teknologi dan alat-alat profesional</p>
                         </div>
                     </div>
                     
                     <!-- Square (1:1) -->
-                    <div class="gallery-item square" data-category="behind" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="250">
-                        <div class="gallery-image-container">
-                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800&q=80" alt="Set Produksi" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 800\"><rect width=\"800\" height=\"800\" fill=\"%23b38b59\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Set Produksi</text></svg>'" />
-                        </div>
+                    <div class="gallery-item" 
+                         data-aos="zoom-in" 
+                         data-aos-duration="800" 
+                         data-aos-delay="250">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800&q=80" alt="Set Produksi" loading="lazy" />
                         <div class="gallery-overlay">
                             <h4 class="gallery-title">Set Produksi</h4>
-                            <p class="gallery-description">Lokasi syuting yang dipersiapkan dengan detail untuk visual terbaik</p>
+                            <p class="gallery-description">Lokasi syuting yang dipersiapkan</p>
                         </div>
                     </div>
                     
                     <!-- Portrait (3:4) -->
-                    <div class="gallery-item portrait" data-category="portrait" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
-                        <div class="gallery-image-container">
-                            <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1067&q=80" alt="Kamera Professional" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 1067\"><rect width=\"800\" height=\"1067\" fill=\"%235a7d9a\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Kamera Professional</text></svg>'" />
-                        </div>
+                    <div class="gallery-item gallery-item-tall" 
+                         data-aos="zoom-in" 
+                         data-aos-duration="800" 
+                         data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1067&q=80" alt="Kamera Professional" loading="lazy" />
                         <div class="gallery-overlay">
                             <h4 class="gallery-title">Kamera Professional</h4>
-                            <p class="gallery-description">Alat utama produksi film berkualitas dengan lensa premium</p>
+                            <p class="gallery-description">Alat utama produksi film berkualitas</p>
                         </div>
                     </div>
                     
                     <!-- Wide (16:9) -->
-                    <div class="gallery-item ultrawide" data-category="landscape" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="350">
-                        <div class="gallery-image-container">
-                            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900&q=80" alt="Lighting Setup" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1600 900\"><rect width=\"1600\" height=\"900\" fill=\"%239a5a7d\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Lighting Setup</text></svg>'" />
-                        </div>
+                    <div class="gallery-item gallery-item-wide" 
+                         data-aos="zoom-in" 
+                         data-aos-duration="800" 
+                         data-aos-delay="350">
+                        <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900&q=80" alt="Lighting Setup" loading="lazy" />
                         <div class="gallery-overlay">
                             <h4 class="gallery-title">Lighting Setup</h4>
-                            <p class="gallery-description">Penyiapan pencahayaan profesional untuk visual sinematik terbaik</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Square (1:1) -->
-                    <div class="gallery-item square" data-category="behind" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
-                        <div class="gallery-image-container">
-                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800&q=80" alt="Editing Session" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 800\"><rect width=\"800\" height=\"800\" fill=\"%23b38b59\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Editing Session</text></svg>'" />
-                        </div>
-                        <div class="gallery-overlay">
-                            <h4 class="gallery-title">Editing Session</h4>
-                            <p class="gallery-description">Proses editing dan color grading untuk hasil final yang sempurna</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Portrait (2:3) -->
-                    <div class="gallery-item portrait" data-category="portrait" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="450">
-                        <div class="gallery-image-container">
-                            <img src="https://images.unsplash.com/photo-1489599809516-9827b6d1cf13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=1200&q=80" alt="Actor Preparation" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 1200\"><rect width=\"800\" height=\"1200\" fill=\"%235a7d9a\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"60\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Actor Preparation</text></svg>'" />
-                        </div>
-                        <div class="gallery-overlay">
-                            <h4 class="gallery-title">Actor Preparation</h4>
-                            <p class="gallery-description">Persiapan pemeran sebelum pengambilan gambar dimulai</p>
+                            <p class="gallery-description">Penyiapan pencahayaan untuk visual terbaik</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PARTNER SECTION dengan CAROUSEL -->
-    <section class="partner-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
-                <span class="section-subtitle">Kolaborasi & Dukungan</span>
-                <h2 class="section-title">Partner & Sponsor</h2>
-                <p class="section-description text-balance">Kami dengan tulus mengucapkan terima kasih kepada semua pihak yang telah mendukung perjalanan kreatif Kala Rupa Production.</p>
-            </div>
-            
-            <!-- Swiper Carousel -->
-            <div class="partner-carousel swiper" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="partner-slide swiper-slide">
-                        <img src="https://via.placeholder.com/300x100/b38b59/ffffff?text=OSIS+BSS" alt="OSIS Brawijaya Smart School" class="partner-logo" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\"><rect width=\"300\" height=\"100\" fill=\"%23b38b59\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">OSIS BSS</text></svg>'" />
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="partner-slide swiper-slide">
-                        <img src="https://via.placeholder.com/300x100/5a7d9a/ffffff?text=Diknas+Malang" alt="Dinas Pendidikan Kota Malang" class="partner-logo" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\"><rect width=\"300\" height=\"100\" fill=\"%235a7d9a\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Diknas Malang</text></svg>'" />
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="partner-slide swiper-slide">
-                        <img src="https://via.placeholder.com/300x100/9a5a7d/ffffff?text=Creative+Hub" alt="Malang Creative Hub" class="partner-logo" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\"><rect width=\"300\" height=\"100\" fill=\"%239a5a7d\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Creative Hub</text></svg>'" />
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="partner-slide swiper-slide">
-                        <img src="https://via.placeholder.com/300x100/b38b59/ffffff?text=Youth+Film+Fest" alt="Youth Film Festival" class="partner-logo" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\"><rect width=\"300\" height=\"100\" fill=\"%23b38b59\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Youth Film Fest</text></svg>'" />
-                    </div>
-                    <!-- Slide 5 -->
-                    <div class="partner-slide swiper-slide">
-                        <img src="https://via.placeholder.com/300x100/5a7d9a/ffffff?text=Art+Council" alt="Malang Art Council" class="partner-logo" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\"><rect width=\"300\" height=\"100\" fill=\"%235a7d9a\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Art Council</text></svg>'" />
-                    </div>
-                    <!-- Slide 6 -->
-                    <div class="partner-slide swiper-slide">
-                        <img src="https://via.placeholder.com/300x100/9a5a7d/ffffff?text=Film+Community" alt="Malang Film Community" class="partner-logo" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\"><rect width=\"300\" height=\"100\" fill=\"%239a5a7d\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Film Community</text></svg>'" />
-                    </div>
-                    <!-- Slide 7 -->
-                    <div class="partner-slide swiper-slide">
-                        <img src="https://via.placeholder.com/300x100/b38b59/ffffff?text=Tech+Sponsor" alt="Tech Sponsor" class="partner-logo" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\"><rect width=\"300\" height=\"100\" fill=\"%23b38b59\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Tech Sponsor</text></svg>'" />
-                    </div>
-                    <!-- Slide 8 -->
-                    <div class="partner-slide swiper-slide">
-                        <img src="https://via.placeholder.com/300x100/5a7d9a/ffffff?text=Media+Partner" alt="Media Partner" class="partner-logo" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 100\"><rect width=\"300\" height=\"100\" fill=\"%235a7d9a\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\" dominant-baseline=\"middle\">Media Partner</text></svg>'" />
-                    </div>
-                </div>
-                
-                <!-- Navigation buttons -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                
-                <!-- Pagination dots -->
-                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -2196,14 +2195,21 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+            <div class="section-header" 
+                 data-aos="fade-down" 
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-out-cubic">
                 <span class="section-subtitle">Jalin Kolaborasi</span>
                 <h2 class="section-title">Contact</h2>
-                <p class="section-description text-balance">Tertarik untuk berkolaborasi atau ingin mengetahui lebih lanjut tentang karya dan visi kami? Tim Kala Rupa Production dengan senang hati akan merespons Anda.</p>
+                <p class="section-description ">Tertarik untuk berkolaborasi atau ingin mengetahui lebih lanjut tentang karya dan visi kami? Tim Kala Rupa Production dengan senang hati akan merespons Anda.</p>
             </div>
             
             <div class="contact-grid">
-                <div class="contact-card" data-aos="flip-up" data-aos-duration="800" data-aos-delay="100" data-aos-easing="ease-out-cubic">
+                <div class="contact-card" 
+                     data-aos="zoom-in" 
+                     data-aos-duration="800" 
+                     data-aos-delay="100"
+                     data-aos-easing="ease-out-cubic">
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
@@ -2213,29 +2219,31 @@
                         <p>SMAS Brawijaya Smart School<br/>
                         Jl. Veteran No. 12, Klojen<br/>
                         Malang, Jawa Timur 65145</p>
-                        <p><strong>Jam Operasional:</strong><br/>
-                        Senin - Jumat: 08:00 - 16:00<br/>
-                        Sabtu: 08:00 - 12:00</p>
                     </div>
                 </div>
                 
-                <div class="contact-card" data-aos="flip-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-out-cubic">
+                <div class="contact-card" 
+                     data-aos="zoom-in" 
+                     data-aos-duration="800" 
+                     data-aos-delay="200"
+                     data-aos-easing="ease-out-cubic">
                     <div class="contact-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <h3 class="contact-title">Penanggung Jawab</h3>
                     <div class="contact-details">
                         <p><strong>Bu Sari Dewi, M.Pd.</strong></p>
-                        <p>Guru Pembimbing & Supervisor<br/>
+                        <p>Guru Pembimbing<br/>
                         WhatsApp: 0812-3456-7890<br/>
                         Email: sari.dewi@brawijayass.sch.id</p>
-                        <p><strong>Bapak Ahmad Fauzi, S.Pd.</strong><br/>
-                        Koordinator Produksi<br/>
-                        Email: ahmad.fauzi@brawijayass.sch.id</p>
                     </div>
                 </div>
                 
-                <div class="contact-card" data-aos="flip-up" data-aos-duration="800" data-aos-delay="200" data-aos-easing="ease-out-cubic">
+                <div class="contact-card" 
+                     data-aos="zoom-in" 
+                     data-aos-duration="800" 
+                     data-aos-delay="300"
+                     data-aos-easing="ease-out-cubic">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
@@ -2244,10 +2252,7 @@
                         <p><strong>Kolaborasi & Informasi</strong></p>
                         <p>Email: kalarupa@brawijayass.sch.id<br/>
                         Instagram: @kalarupa.production<br/>
-                        YouTube: Kala Rupa Production<br/>
                         Office: +62 341 567890</p>
-                        <p><strong>Untuk proposal kerja sama:</strong><br/>
-                        kolaborasi@kalarupa.sch.id</p>
                     </div>
                 </div>
             </div>
@@ -2257,300 +2262,150 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
+            <!-- Footer Logos -->
+            <div class="footer-logos" data-aos="fade-up" data-aos-duration="1000">
+                <div class="footer-logo-item">
+                    <img src="assets/image/KalaRupa.png" alt="Kala Rupa Production Logo" class="footer-logo-img">
+                    <div class="footer-logo-text">Kala Rupa Production</div>
+                </div>
+                <div class="footer-logo-item">
+                    <img src="assets/image/MicroHelix Tech Solutions.png" alt="PT. MicroHelix Tech Solutions Logo" class="footer-logo-img">
+                    <div class="footer-logo-text">PT. MicroHelix Tech Solutions</div>
+                </div>
+                <div class="footer-logo-item">
+                    <img src="assets/image/BSS.png" alt="SMA BSS Logo" class="footer-logo-img">
+                    <div class="footer-logo-text">SMAS Brawijaya Smart School</div>
+                </div>
+            </div>
+
             <div class="footer-content">
-                <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic">
+                <div class="footer-col" 
+                     data-aos="fade-right" 
+                     data-aos-duration="800"
+                     data-aos-easing="ease-out-cubic">
                     <div class="footer-logo">Kala <span>Rupa</span> Production</div>
-                    <p class="footer-description text-balance">Sebuah production house elegan yang menggabungkan keindahan visual dengan kedalaman naratif. Visual storytelling yang digarap dengan presisi, intensi, dan disiplin tinggi oleh siswa-siswi berbakat SMAS Brawijaya Smart School.</p>
+                    <p class="footer-description ">Sebuah production house elegan yang menggabungkan keindahan visual dengan kedalaman naratif. Visual storytelling yang digarap dengan presisi, intensi, dan disiplin tinggi.</p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
                 
-                <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" data-aos-easing="ease-out-cubic">
-                    <h4 class="footer-title">Navigasi Cepat</h4>
+                <div class="footer-col" 
+                     data-aos="fade-up" 
+                     data-aos-duration="800" 
+                     data-aos-delay="100"
+                     data-aos-easing="ease-out-cubic">
+                    <h4 class="footer-title">Navigasi</h4>
                     <ul class="footer-links">
-                        <li><a href="#teaser"><i class="fas fa-play"></i> Karya & Teaser</a></li>
-                        <li><a href="#"><i class="fas fa-film"></i> Proyek Kami</a></li>
-                        <li><a href="#"><i class="fas fa-users"></i> Tim & Crew</a></li>
-                        <li><a href="#"><i class="fas fa-images"></i> Gallery</a></li>
-                        <li><a href="#contact"><i class="fas fa-envelope"></i> Kontak & Kolaborasi</a></li>
-                        <li><a href="#"><i class="fas fa-newspaper"></i> Berita & Update</a></li>
+                        <li><a href="#countdown"><i class="fas fa-clock"></i> Countdown</a></li>
+                        <li><a href="#teaser"><i class="fas fa-play"></i> Karya Kami</a></li>
+                        <li><a href="#team"><i class="fas fa-users"></i> Tim Kami</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Kontak</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150" data-aos-easing="ease-out-cubic">
-                    <h4 class="footer-title">Sekolah & Institusi</h4>
-                    <p class="footer-description text-balance">Sebagai bagian integral dari komunitas pendidikan bergengsi, Kala Rupa Production merupakan wadah eksklusif pengembangan talenta film dan sinematografi bagi siswa-siswi SMAS Brawijaya Smart School.</p>
-                    <a href="#" class="footer-links"><i class="fas fa-external-link-alt"></i> Kunjungi Website Sekolah</a>
-                    <a href="#" class="footer-links"><i class="fas fa-calendar-alt"></i> Kalender Akademik</a>
-                    <a href="#" class="footer-links"><i class="fas fa-graduation-cap"></i> Program Khusus Sinematografi</a>
+                <div class="footer-col" 
+                     data-aos="fade-left" 
+                     data-aos-duration="800" 
+                     data-aos-delay="150"
+                     data-aos-easing="ease-out-cubic">
+                    <h4 class="footer-title">Sekolah</h4>
+                    <p class="footer-description ">Sebagai bagian integral dari komunitas pendidikan bergengsi, Kala Rupa Production merupakan wadah eksklusif pengembangan talenta film.</p>
+                    <a href="#" class="footer-links"><i class="fas fa-external-link-alt"></i> Website Sekolah</a>
                 </div>
             </div>
             
             <div class="copyright">
                 © 2026 Kala Rupa Production — SMAS Brawijaya Smart School<br/>
-                <small>Didesain dengan penuh gairah oleh tim kreatif Kala Rupa Production. Semua hak cipta dilindungi undang-undang.</small><br/>
-                <small style="opacity: 0.7; margin-top: 10px; display: block;">Website ini menggunakan teknologi terbaru untuk pengalaman visual terbaik. Optimized for Chrome, Firefox, Safari, and Edge.</small>
+                <small>Didesain dengan penuh gairah oleh tim kreatif Kala Rupa Production.</small>
             </div>
         </div>
     </footer>
 
     <!-- AOS Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
     <script>
-        // Initialize AOS dengan konfigurasi advanced
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({
-                duration: 1000,
-                once: false,
-                offset: 100,
-                easing: 'ease-out-cubic',
-                disable: window.innerWidth < 320,
-                mirror: true,
-                startEvent: 'DOMContentLoaded'
-            });
+document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({
+        duration: 800,
+        once: true,          // 🔑 animasi hanya 1x
+        offset: 100,
+        easing: 'ease-out-cubic',
+        disable: window.innerWidth < 320,
+        mirror: false,       // 🔑 jangan animate saat scroll balik
+        startEvent: 'DOMContentLoaded'
+    });
             
-            // Hide loading screen dengan animasi
+            // Hide loading screen
             setTimeout(() => {
                 const loadingScreen = document.getElementById('loadingScreen');
                 if (loadingScreen) {
                     loadingScreen.classList.add('hidden');
-                    // Reset scroll setelah loading selesai
-                    window.scrollTo(0, 0);
                 }
-            }, 1200);
+            }, 1000);
             
-            // Inisialisasi Swiper Carousel untuk partner
-            const partnerSwiper = new Swiper('.partner-carousel', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 40,
-                    },
-                },
-            });
-            
-            // Inisialisasi variabel tema
-            let currentTheme = 1;
-            let isDarkMode = false;
-            
-            // Ambil elemen-elemen penting
+            // Elegant Theme Toggle
             const themeToggle = document.getElementById('themeToggle');
-            const themeSelector = document.getElementById('themeSelector');
-            const openThemeSelector = document.getElementById('openThemeSelector');
-            const themeClose = document.getElementById('themeClose');
-            const themeOptions = document.querySelectorAll('.theme-option');
             const sunIcon = themeToggle.querySelector('.fa-sun');
             const moonIcon = themeToggle.querySelector('.fa-moon');
             const body = document.body;
-            const root = document.documentElement;
             
-            // Check for saved theme atau preferensi sistem
+            // Check for saved theme or prefer-color-scheme
             const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
             const savedTheme = localStorage.getItem('theme');
-            const savedColorTheme = localStorage.getItem('colorTheme');
             
-            // Terapkan tema yang disimpan atau preferensi sistem
+            // Apply saved theme or system preference
             if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
                 enableDarkMode();
             } else {
                 enableLightMode();
             }
             
-            // Terapkan tema warna yang disimpan
-            if (savedColorTheme) {
-                currentTheme = parseInt(savedColorTheme);
-                applyColorTheme(currentTheme);
-                updateThemeOptions(currentTheme);
-            }
-            
-            // Event listener untuk toggle dark/light mode
             themeToggle.addEventListener('click', () => {
-                themeToggle.classList.add('active');
-                setTimeout(() => {
-                    themeToggle.classList.remove('active');
-                }, 600);
-                
                 if (body.classList.contains('dark-mode')) {
                     enableLightMode();
                 } else {
                     enableDarkMode();
                 }
+                
+                // Add click animation
+                themeToggle.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    themeToggle.style.transform = 'scale(1)';
+                }, 150);
             });
             
-            // Event listener untuk membuka theme selector
-            openThemeSelector.addEventListener('click', () => {
-                themeSelector.classList.add('active');
-                // Animate theme selector appearance
-                gsap.fromTo(themeSelector, 
-                    { opacity: 0, scale: 0.8 },
-                    { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }
-                );
-            });
-            
-            // Event listener untuk menutup theme selector
-            themeClose.addEventListener('click', () => {
-                gsap.to(themeSelector, {
-                    opacity: 0,
-                    scale: 0.8,
-                    duration: 0.3,
-                    ease: "back.in(1.7)",
-                    onComplete: () => {
-                        themeSelector.classList.remove('active');
-                    }
-                });
-            });
-            
-            // Event listener untuk memilih tema warna
-            themeOptions.forEach(option => {
-                option.addEventListener('click', () => {
-                    const theme = option.getAttribute('data-theme');
-                    currentTheme = parseInt(theme);
-                    
-                    // Apply color theme
-                    applyColorTheme(currentTheme);
-                    
-                    // Update active state
-                    updateThemeOptions(currentTheme);
-                    
-                    // Save to localStorage
-                    localStorage.setItem('colorTheme', currentTheme);
-                    
-                    // Close theme selector
-                    themeClose.click();
-                });
-            });
-            
-            // Fungsi untuk mengaktifkan dark mode dengan animasi
             function enableDarkMode() {
-                isDarkMode = true;
                 body.classList.add('dark-mode');
                 sunIcon.style.display = 'none';
                 moonIcon.style.display = 'block';
                 localStorage.setItem('theme', 'dark');
                 
-                // Animate theme transition
-                animateThemeTransition();
+                // Smooth theme transition
+                document.documentElement.style.transition = 'background 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                body.style.transition = 'background 0.6s cubic-bezier(0.4, 0, 0.2, 1), color 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
                 
-                // Apply current color theme in dark mode
-                applyColorTheme(currentTheme);
+                // Initialize dark mode particles
+                initParticlesDark();
             }
             
-            // Fungsi untuk mengaktifkan light mode dengan animasi
             function enableLightMode() {
-                isDarkMode = false;
                 body.classList.remove('dark-mode');
                 sunIcon.style.display = 'block';
                 moonIcon.style.display = 'none';
                 localStorage.setItem('theme', 'light');
                 
-                // Animate theme transition
-                animateThemeTransition();
+                // Smooth theme transition
+                document.documentElement.style.transition = 'background 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                body.style.transition = 'background 0.6s cubic-bezier(0.4, 0, 0.2, 1), color 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
                 
-                // Apply current color theme in light mode
-                applyColorTheme(currentTheme);
-            }
-            
-            // Fungsi untuk menerapkan tema warna
-            function applyColorTheme(themeNumber) {
-                // Update CSS variables berdasarkan tema dan mode
-                if (isDarkMode) {
-                    switch(themeNumber) {
-                        case 1:
-                            root.style.setProperty('--accent', 'var(--theme-1-accent)');
-                            root.style.setProperty('--accent-dark', 'var(--theme-1-primary)');
-                            root.style.setProperty('--hero-rupa', 'var(--theme-1-accent)');
-                            break;
-                        case 2:
-                            root.style.setProperty('--accent', 'var(--theme-2-accent)');
-                            root.style.setProperty('--accent-dark', 'var(--theme-2-primary)');
-                            root.style.setProperty('--hero-rupa', 'var(--theme-2-accent)');
-                            break;
-                        case 3:
-                            root.style.setProperty('--accent', 'var(--theme-3-accent)');
-                            root.style.setProperty('--accent-dark', 'var(--theme-3-primary)');
-                            root.style.setProperty('--hero-rupa', 'var(--theme-3-accent)');
-                            break;
-                    }
-                } else {
-                    switch(themeNumber) {
-                        case 1:
-                            root.style.setProperty('--accent', 'var(--theme-1-primary)');
-                            root.style.setProperty('--accent-dark', 'var(--theme-1-secondary)');
-                            root.style.setProperty('--hero-rupa', 'var(--theme-1-secondary)');
-                            break;
-                        case 2:
-                            root.style.setProperty('--accent', 'var(--theme-2-primary)');
-                            root.style.setProperty('--accent-dark', 'var(--theme-2-secondary)');
-                            root.style.setProperty('--hero-rupa', 'var(--theme-2-secondary)');
-                            break;
-                        case 3:
-                            root.style.setProperty('--accent', 'var(--theme-3-primary)');
-                            root.style.setProperty('--accent-dark', 'var(--theme-3-secondary)');
-                            root.style.setProperty('--hero-rupa', 'var(--theme-3-secondary)');
-                            break;
-                    }
-                }
-                
-                // Animate color change
-                gsap.to('body', {
-                    duration: 0.8,
-                    ease: "power2.out",
-                    '--accent': getComputedStyle(root).getPropertyValue('--accent'),
-                    '--accent-dark': getComputedStyle(root).getPropertyValue('--accent-dark'),
-                    '--hero-rupa': getComputedStyle(root).getPropertyValue('--hero-rupa')
-                });
-            }
-            
-            // Fungsi untuk mengupdate tampilan theme options
-            function updateThemeOptions(activeTheme) {
-                themeOptions.forEach(option => {
-                    option.classList.remove('active');
-                    if (parseInt(option.getAttribute('data-theme')) === activeTheme) {
-                        option.classList.add('active');
-                    }
-                });
-            }
-            
-            // Fungsi untuk animasi transisi tema
-            function animateThemeTransition() {
-                // Add transition class
-                body.style.transition = 'background 0.8s cubic-bezier(0.77, 0, 0.175, 1), color 0.8s cubic-bezier(0.77, 0, 0.175, 1)';
-                root.style.transition = 'background 0.8s cubic-bezier(0.77, 0, 0.175, 1)';
-                
-                // Remove transition after animation
-                setTimeout(() => {
-                    body.style.transition = '';
-                    root.style.transition = '';
-                }, 800);
+                // Initialize light mode particles
+                initParticlesLight();
             }
             
             // Listen for system theme changes
@@ -2564,59 +2419,171 @@
                 }
             });
             
-            // Smooth scroll untuk anchor links dengan offset
+            // Initialize particles
+            function initParticlesLight() {
+                if (typeof particlesJS !== 'undefined') {
+                    particlesJS('particles-js', {
+                        particles: {
+                            number: { value: 40, density: { enable: true, value_area: 800 } },
+                            color: { value: "#b38b59" },
+                            shape: { type: "circle" },
+                            opacity: { value: 0.3, random: true },
+                            size: { value: 3, random: true },
+                            line_linked: { enable: true, distance: 150, color: "#b38b59", opacity: 0.2, width: 1 },
+                            move: { enable: true, speed: 1, direction: "none", random: true, straight: false, out_mode: "out" }
+                        },
+                        interactivity: {
+                            detect_on: "canvas",
+                            events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } }
+                        },
+                        retina_detect: true
+                    });
+                }
+            }
+            
+            function initParticlesDark() {
+                if (typeof particlesJS !== 'undefined') {
+                    particlesJS('particles-js', {
+                        particles: {
+                            number: { value: 60, density: { enable: true, value_area: 800 } },
+                            color: { value: "#d4b78f" },
+                            shape: { type: "circle" },
+                            opacity: { value: 0.5, random: true },
+                            size: { value: 3, random: true },
+                            line_linked: { enable: true, distance: 150, color: "#d4b78f", opacity: 0.3, width: 1 },
+                            move: { enable: true, speed: 1.5, direction: "none", random: true, straight: false, out_mode: "out" }
+                        },
+                        interactivity: {
+                            detect_on: "canvas",
+                            events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } }
+                        },
+                        retina_detect: true
+                    });
+                }
+            }
+            
+            // Initialize particles based on current theme
+            if (body.classList.contains('dark-mode')) {
+                initParticlesDark();
+            } else {
+                initParticlesLight();
+            }
+            
+            // Countdown Timer
+            function updateCountdown() {
+                const targetDate = new Date('April 30, 2026 19:00:00').getTime();
+                const now = new Date().getTime();
+                const timeRemaining = targetDate - now;
+                
+                if (timeRemaining > 0) {
+                    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+                    
+                    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                    
+                    // Add pulsing animation to seconds
+                    const secondsElement = document.getElementById('seconds');
+                    secondsElement.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        secondsElement.style.transform = 'scale(1)';
+                    }, 500);
+                } else {
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                }
+            }
+            
+            // Update countdown every second
+            setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call
+            
+            // Dot Navigation Functionality
+            const dotItems = document.querySelectorAll('.dot-item');
+            const sections = document.querySelectorAll('section');
+            
+            function updateDotNavigation() {
+                let currentSection = '';
+                let currentSectionIndex = 0;
+                
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    const scrollPosition = window.scrollY + window.innerHeight / 3;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        currentSection = section.id;
+                        currentSectionIndex = index;
+                    }
+                });
+                
+                dotItems.forEach((dot, index) => {
+                    if (index === currentSectionIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Dot click navigation
+            dotItems.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Custom scroll animations
+            function checkScroll() {
+                const elements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in');
+                
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+                
+                updateDotNavigation();
+            }
+            
+            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     const href = this.getAttribute('href');
-                    if (href === '#' || href === '#!') return;
+                    if (href === '#') return;
                     
                     e.preventDefault();
                     const target = document.querySelector(href);
                     if (target) {
-                        const offsetTop = target.offsetTop - 100;
+                        const offsetTop = target.offsetTop - 80;
                         window.scrollTo({
                             top: offsetTop,
                             behavior: 'smooth'
                         });
                         
-                        // Update URL tanpa reload
                         history.pushState(null, null, href);
                     }
                 });
             });
             
-            // Gallery filtering system
-            const galleryFilters = document.querySelectorAll('.gallery-filter');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            
-            galleryFilters.forEach(filter => {
-                filter.addEventListener('click', () => {
-                    // Remove active class from all filters
-                    galleryFilters.forEach(f => f.classList.remove('active'));
-                    // Add active class to clicked filter
-                    filter.classList.add('active');
-                    
-                    const filterValue = filter.getAttribute('data-filter');
-                    
-                    // Filter gallery items
-                    galleryItems.forEach(item => {
-                        const category = item.getAttribute('data-category');
-                        
-                        if (filterValue === 'all' || category === filterValue) {
-                            item.style.display = 'block';
-                            // Animate item appearance
-                            gsap.fromTo(item, 
-                                { opacity: 0, y: 20 },
-                                { opacity: 1, y: 0, duration: 0.5, delay: 0.1 }
-                            );
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-            
-            // Fix untuk iOS viewport height
+            // Fix for iOS viewport height
             function setVH() {
                 const vh = window.innerHeight * 0.01;
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -2626,130 +2593,139 @@
             window.addEventListener('resize', setVH);
             window.addEventListener('orientationchange', setVH);
             
-            // Team card hover effects enhancement
-            const teamCards = document.querySelectorAll('.team-card');
-            teamCards.forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    const content = card.querySelector('.team-card-content');
-                    if (content) {
-                        gsap.to(content, {
-                            y: 0,
-                            opacity: 1,
-                            duration: 0.7,
-                            ease: "power2.out"
-                        });
-                    }
-                    
-                    // Animate image scale
-                    const img = card.querySelector('.team-card-image img');
-                    if (img) {
-                        gsap.to(img, {
-                            scale: 1.1,
-                            duration: 1.5,
-                            ease: "power2.out"
-                        });
-                    }
-                });
+            // Gallery auto-layout enhancement
+            function optimizeGalleryLayout() {
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                const galleryGrid = document.querySelector('.gallery-grid');
                 
-                card.addEventListener('mouseleave', () => {
-                    const content = card.querySelector('.team-card-content');
-                    if (content) {
-                        gsap.to(content, {
-                            y: '100%',
-                            opacity: 0,
-                            duration: 0.5,
-                            ease: "power2.in"
-                        });
-                    }
+                if (galleryGrid && galleryItems.length > 0) {
+                    // Remove all grid span classes
+                    galleryItems.forEach(item => {
+                        item.classList.remove('gallery-item-tall', 'gallery-item-wide');
+                    });
                     
-                    // Reset image scale
-                    const img = card.querySelector('.team-card-image img');
-                    if (img) {
-                        gsap.to(img, {
-                            scale: 1,
-                            duration: 1,
-                            ease: "power2.out"
-                        });
+                    // Apply smart layout based on aspect ratio
+                    galleryItems.forEach((item, index) => {
+                        const img = item.querySelector('img');
+                        if (img) {
+                            // Simulate checking aspect ratio
+                            const isPortrait = index % 4 === 0 || index % 4 === 3;
+                            const isWide = index % 6 === 2;
+                            
+                            if (isPortrait) {
+                                item.classList.add('gallery-item-tall');
+                            } else if (isWide) {
+                                item.classList.add('gallery-item-wide');
+                            }
+                        }
+                    });
+                }
+            }
+            
+            // Optimize gallery on load and resize
+            window.addEventListener('load', optimizeGalleryLayout);
+            window.addEventListener('resize', optimizeGalleryLayout);
+            
+            // Add glowing effect to countdown periodically
+            setInterval(() => {
+                const countdownItems = document.querySelectorAll('.countdown-item');
+                const randomIndex = Math.floor(Math.random() * countdownItems.length);
+                countdownItems.forEach((item, index) => {
+                    if (index === randomIndex) {
+                        item.classList.add('glowing');
+                        setTimeout(() => {
+                            item.classList.remove('glowing');
+                        }, 3000);
                     }
                 });
-            });
+            }, 5000);
             
-            // Animasi tambahan untuk elemen saat scroll
-            gsap.registerPlugin(ScrollTrigger);
+            // Hero background optimization - FIXED
+            function optimizeHeroBackground() {
+                const hero = document.querySelector('.hero');
+                const heroBackground = document.querySelector('.hero-background');
+                
+                if (hero && heroBackground) {
+                    // Force hero background to cover entire hero section
+                    heroBackground.style.width = '100%';
+                    heroBackground.style.height = '100%';
+                    heroBackground.style.position = 'absolute';
+                    heroBackground.style.top = '0';
+                    heroBackground.style.left = '0';
+                    
+                    // Prevent hero overflow issues
+                    hero.style.overflow = 'hidden';
+                    hero.style.position = 'relative';
+                    
+                    // Ensure hero content stays above background
+                    const heroContent = document.querySelector('.hero-content');
+                    if (heroContent) {
+                        heroContent.style.position = 'relative';
+                        heroContent.style.zIndex = '2';
+                    }
+                }
+            }
             
-            // Animate section headers on scroll
-            gsap.utils.toArray('.section-header').forEach(header => {
-                gsap.from(header, {
-                    scrollTrigger: {
-                        trigger: header,
-                        start: "top 80%",
-                        end: "bottom 20%",
-                        toggleActions: "play none none reverse"
-                    },
-                    y: 50,
-                    opacity: 0,
-                    duration: 1,
-                    ease: "power2.out"
-                });
-            });
+            // Initialize scroll animations
+            window.addEventListener('scroll', checkScroll);
+            checkScroll(); // Initial check
             
-            // Add subtle floating animation to theme switcher
-            gsap.to('.theme-switcher', {
-                y: -10,
-                duration: 2,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut"
-            });
+            // Optimize hero on load and resize
+            window.addEventListener('load', optimizeHeroBackground);
+            window.addEventListener('resize', optimizeHeroBackground);
             
-            // Handle page visibility change
-            document.addEventListener('visibilitychange', () => {
-                if (!document.hidden) {
-                    // Refresh AOS ketika halaman kembali visible
+            // Handle resize events efficiently
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
                     AOS.refresh();
-                }
+                    optimizeGalleryLayout();
+                    optimizeHeroBackground();
+                    updateDotNavigation();
+                }, 250);
             });
             
-            // Keyboard navigation untuk tema
-            document.addEventListener('keydown', (e) => {
-                // Toggle dark/light mode dengan Ctrl+Shift+T
-                if (e.ctrlKey && e.shiftKey && e.key === 'T') {
-                    e.preventDefault();
-                    themeToggle.click();
-                }
-                
-                // Buka theme selector dengan Ctrl+Shift+P
-                if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-                    e.preventDefault();
-                    if (themeSelector.classList.contains('active')) {
-                        themeClose.click();
+            // Handle scroll events for theme switcher opacity
+            window.addEventListener('scroll', () => {
+                const themeSwitcher = document.getElementById('themeSwitcher');
+                if (themeSwitcher) {
+                    const scrollPosition = window.scrollY;
+                    if (scrollPosition > 100) {
+                        themeSwitcher.style.opacity = '0.7';
                     } else {
-                        openThemeSelector.click();
-                    }
-                }
-                
-                // Navigasi tema dengan angka 1-3 saat theme selector terbuka
-                if (themeSelector.classList.contains('active')) {
-                    if (e.key >= '1' && e.key <= '3') {
-                        e.preventDefault();
-                        const themeNum = parseInt(e.key);
-                        themeOptions[themeNum - 1].click();
-                    }
-                    
-                    // Tutup dengan Escape
-                    if (e.key === 'Escape') {
-                        themeClose.click();
+                        themeSwitcher.style.opacity = '0.9';
                     }
                 }
             });
             
-            // Image error handling fallback
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                img.addEventListener('error', function() {
-                    this.src = `data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${this.width || 300} ${this.height || 200}"><rect width="100%" height="100%" fill="%23${getComputedStyle(document.documentElement).getPropertyValue('--accent').replace('#', '')}"/><text x="50%" y="50%" font-family="Arial" font-size="20" fill="white" text-anchor="middle" dominant-baseline="middle">${this.alt || 'Image'}</text></svg>`;
+            // Force team images to maintain 4:5 ratio on all devices
+            function maintainTeamImageRatios() {
+                const teamImages = document.querySelectorAll('.team-card-image');
+                teamImages.forEach(image => {
+                    // Force 4:5 ratio (5/4 = 1.25 = 125%)
+                    image.style.paddingTop = '125%';
+                    
+                    // Ensure images fill the container properly
+                    const img = image.querySelector('img');
+                    if (img) {
+                        img.style.position = 'absolute';
+                        img.style.top = '0';
+                        img.style.left = '0';
+                        img.style.width = '100%';
+                        img.style.height = '100%';
+                        img.style.objectFit = 'cover';
+                    }
                 });
-            });
+            }
+            
+            // Initial optimizations
+            optimizeHeroBackground();
+            optimizeGalleryLayout();
+            maintainTeamImageRatios();
+            
+            // Ensure team image ratios are maintained on window resize
+            window.addEventListener('resize', maintainTeamImageRatios);
         });
     </script>
 </body>
