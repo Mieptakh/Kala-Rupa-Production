@@ -915,13 +915,18 @@ mix-blend-mode: darken;
             background: linear-gradient(90deg, transparent, var(--border), transparent);
         }
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
-            gap: clamp(1.5rem, 2.5vw, 2.5rem);
-            margin-top: clamp(1.5rem, 3vw, 3rem);
-            width: 100%;
-        }
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
+    gap: clamp(1.5rem, 2.5vw, 2.5rem);
+
+    justify-content: center;
+
+    margin: clamp(1.5rem, 3vw, 3rem) auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
 
         .team-card {
             background: var(--bg-tertiary);
@@ -1846,9 +1851,9 @@ mix-blend-mode: darken;
         <div class="dot-item active" data-section="Home" data-target="hero"></div>
         <div class="dot-item" data-section="Sponsor" data-target="sponsor"></div>
         <div class="dot-item" data-section="Countdown" data-target="countdown"></div>
-        <div class="dot-item" data-section="Trailer" data-target="teaser"></div>
+        <!-- <div class="dot-item" data-section="Trailer" data-target="teaser"></div> -->
         <div class="dot-item" data-section="Team" data-target="team"></div>
-        <div class="dot-item" data-section="Gallery" data-target="gallery"></div>
+        <!-- <div class="dot-item" data-section="Gallery" data-target="gallery"></div> -->
         <div class="dot-item" data-section="Contact" data-target="contact"></div>
     </div>
 
@@ -1918,13 +1923,13 @@ mix-blend-mode: darken;
                 <div class="sponsor-marquee-track">
                     <!-- Sponsor Items (4:3 ratio) -->
                     <div class="sponsor-item">
-                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Sony&bg=ffffff" alt="Sony" class="sponsor-img">
+                        <img src="assets/image/BSS.png" alt="SMA BSS" class="sponsor-img">
                     </div>
                     <div class="sponsor-item">
-                        <img src="https://images.unsplash.com/photo-1634942536900-b6a6f50e8816?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Canon&bg=ffffff" alt="Canon" class="sponsor-img">
+                        <img src="assets/image/MicroHelix Tech Solutions.png" alt="PT. MicroHelix Tech Solutions" class="sponsor-img">
                     </div>
                     <div class="sponsor-item">
-                        <img src="https://images.unsplash.com/photo-1634942536969-4d4b1c6c41c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Adobe&bg=ffffff" alt="Adobe" class="sponsor-img">
+                        <img src="assets/image/sponsors/GOSolusindo.png" alt="GO Solusindo Mandiri" class="sponsor-img">
                     </div>
                     <div class="sponsor-item">
                         <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=225&q=80&text=Red&bg=ffffff" alt="Red Cinema" class="sponsor-img">
@@ -2014,7 +2019,7 @@ mix-blend-mode: darken;
         </div>
     </section>
 
-    <!-- TEASER SECTION -->
+    <!-- TEASER SECTION
     <section id="teaser" class="video-section">
         <div class="container">
             <div class="section-header" 
@@ -2033,76 +2038,239 @@ mix-blend-mode: darken;
                 <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!-- TEAM SECTION WITH 4:5 RATIO IMAGES -->
     <section id="team" class="team-section">
         <div class="container">
-            <div class="section-header" 
-                 data-aos="fade-right" 
-                 data-aos-duration="1000"
-                 data-aos-easing="ease-out-cubic">
-                <span class="section-subtitle">Para Visioner</span>
-                <h2 class="section-title">Cast & Crew</h2>
-                <p class="section-description ">Tim siswa-siswi berbakat SMAS Brawijaya Smart School yang menghidupkan setiap proyek film dengan semangat, dedikasi, dan kreativitas tanpa batas.</p>
+            <div class="section-header" data-aos="fade-right">
+            <span class="section-subtitle">Para Visioner</span>
+            <h2 class="section-title">Cast & Crew</h2>
+            <p class="section-description">
+                Tim siswa-siswi berbakat SMAS Brawijaya Smart School yang menghidupkan setiap proyek film dengan semangat, dedikasi, dan kreativitas.
+            </p>
             </div>
-            
+
             <div class="team-grid">
-                <!-- Team Member 1 - 4:5 ratio image -->
-                <div class="team-card" 
-                     data-aos="fade-up" 
-                     data-aos-duration="800" 
-                     data-aos-delay="100"
-                     data-aos-easing="ease-out-cubic">
-                    <div class="team-card-image">
-                        <img src="assets/image/cast&crew/1750419098696 - XI 6_Bramantyo Aji Miarso.jpg" alt="Bramantyo Aji Miarso" loading="lazy" />
-                    </div>
-                    <div class="team-card-content">
-                        <h3 class="team-card-name">Bramantyo Aji Miarso</h3>
-                        <div class="team-card-role">Pimpinan Produksi</div>
-                        <div class="team-card-class">Kelas XI IPA 2</div>
-                        <p class="team-card-quote ">"Seni bukan hanya tentang menciptakan keindahan, tetapi tentang menyampaikan kebenaran yang tersembunyi di balik setiap cerita."</p>
-                    </div>
+
+            <!-- 1. PIMPINAN PRODUKSI -->
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/XI 6_Bramantyo Aji Miarso.jpg" alt="Bramantyo Aji Miarso">
                 </div>
-                
-                <!-- Team Member 2 - 4:5 ratio image -->
-                <div class="team-card" 
-                     data-aos="fade-up" 
-                     data-aos-duration="800" 
-                     data-aos-delay="200"
-                     data-aos-easing="ease-out-cubic">
-                    <div class="team-card-image">
-                        <img src="assets/image/cast&crew/92d667605498b2b09c54b949eecdbc9e_0(1) - xi6 camellia lira putri w.jpg" alt="Rizky Maulana Putra" loading="lazy" />
-                    </div>
-                    <div class="team-card-content">
-                        <h3 class="team-card-name">Rizky Maulana Putra</h3>
-                        <div class="team-card-role">Sutradara & Produser</div>
-                        <div class="team-card-class">Kelas XII IPS 1</div>
-                        <p class="team-card-quote ">"Setiap cerita memiliki jiwa yang unik. Tugas kami adalah menemukan cara terbaik untuk membuatnya hidup di layar."</p>
-                    </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Bramantyo Aji Miarso</h3>
+                <div class="team-card-role">Pimpinan Produksi</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Orang yang kuat bukan mereka yang tidak pernah menangis, namun mereka yang tetap bangkit meski jatuh berkali-kali"</p>
                 </div>
-                
-                <!-- Team Member 3 - 4:5 ratio image -->
-                <div class="team-card" 
-                     data-aos="fade-up" 
-                     data-aos-duration="800" 
-                     data-aos-delay="300"
-                     data-aos-easing="ease-out-cubic">
-                    <div class="team-card-image">
-                        <img src="assets/image/cast&crew/CA7EADBE-11B3-4AB5-AC97-37D4799023F1 - Xl-6_Aqila Alya A..jpeg" alt="Maya Sari Dewi" loading="lazy" />
-                    </div>
-                    <div class="team-card-content">
-                        <h3 class="team-card-name">Maya Sari Dewi</h3>
-                        <div class="team-card-role">Sinematografer</div>
-                        <div class="team-card-class">Kelas XI IPA 3</div>
-                        <p class="team-card-quote ">"Cahaya adalah bahasa universal visual storytelling. Setiap sudut dan bayangan bercerita lebih dari sekadar kata-kata."</p>
-                    </div>
+            </div>
+
+            <!-- 2. SEKRETARIS -->
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/XI6_ILMYRA AVISA FIRLY.jpg" alt="Ilmyra Avisa Firly">
                 </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Ilmyra Avisa Firly</h3>
+                <div class="team-card-role">Sekretaris</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Never question your worth just because someone else couldn't see it"</p>
+                </div>
+            </div>
+
+            <!-- 3. BENDAHARA -->
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/XI-6 kayla sabrina putri.jpeg" alt="Kayla Sabrina Putri">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Kayla Sabrina Putri</h3>
+                <div class="team-card-role">Bendahara</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Awal yang buruk akan memberikan akhir yang baik"</p>
+                </div>
+            </div>
+
+            <!-- 4. SUTRADARA -->
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/Risooo.jpg" alt="Cakra Satrio Jati">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Cakra Satrio Jati</h3>
+                <div class="team-card-role">Sutradara</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"When a clown moves into a palace, he doesn't become a king but the palace becomes a circus"</p>
+                </div>
+            </div>
+
+            <!-- 5. DOP -->
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/camellia lira putri w.jpg" alt="Camellia Lira Putri Wicaksono">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Camellia Lira Putri Wicaksono</h3>
+                <div class="team-card-role">DOP</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Bayangin orang yang lu bayangin lagi ngebayangin yang lu bayangin"</p>
+                </div>
+            </div>
+
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/Xl6_fitryana dyahrani.jpg" alt="Fitryana Dyahrani">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Fitryana Dyahrani</h3>
+                <div class="team-card-role">DOP</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"People come and go, but memories stay forever"</p>
+                </div>
+            </div>
+
+            <!-- 6. EDITOR -->
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/XI6_Salsabila Fiddaraini Putri.png" alt="Salsabila Fiddaraini Putri">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Salsabila Fiddaraini Putri</h3>
+                <div class="team-card-role">Editor</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Meski tak dilihat, setidaknya semua sudah kuusahakan"</p>
+                </div>
+            </div>
+
+            <!-- 7. PENULIS NASKAH -->
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/XI6_annida Muliahati.jpg" alt="Annida Muliahati">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Annida Muliahati</h3>
+                <div class="team-card-role">Penulis Naskah</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Kalau Tuhan berkehendak aku mau kita sama-sama terus"</p>
+                </div>
+            </div>
+
+            <!-- 8. PENATA SUARA -->
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/XI-6 Carissa Nadya Valerie Putri.jpeg" alt="Carissa Nadya Valerie Putri">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Carissa Nadya Valerie Putri</h3>
+                <div class="team-card-role">Penata Suara</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"The best way out is always through"</p>
+                </div>
+            </div>
+
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/Xl-6 Humayraa_ Bay.jpg" alt="Humayraa' Bay">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Humayraa' Bay</h3>
+                <div class="team-card-role">Penata Suara</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Perubahan besar terjadi lewat keputusan kecil yang konsisten"</p>
+                </div>
+            </div>
+
+            <!-- 9. ARTISTIK -->
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/Xl-6_Aqila Alya A..jpeg" alt="Aqila Alya Azzahra">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Aqila Alya Azzahra</h3>
+                <div class="team-card-role">Artistik</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Jika kamu gagal 1000 kali, maka bangkitlah 1001 kali"</p>
+                </div>
+            </div>
+
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/XI-6_AisyahN.jpeg" alt="Aisyah Nuuroh M">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Aisyah Nuuroh M</h3>
+                <div class="team-card-role">Artistik</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Meski dunia kenapa-napa yang penting kerjaan aman"</p>
+                </div>
+            </div>
+
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/ssouloav yy.jpeg" alt="Almira Shofi Azizah">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Almira Shofi Azizah</h3>
+                <div class="team-card-role">Artistik</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Semoga yang disemogakan tersemogakan"</p>
+                </div>
+            </div>
+
+            <!-- 10. AKTOR / AKTRIS -->
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/Jati Wisesa.jpg" alt="Jatiwisesa Catur Maharsa">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Jatiwisesa Catur Maharsa</h3>
+                <div class="team-card-role">Aktor</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Aman"</p>
+                </div>
+            </div>
+
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/XI6 _Xyza Syarafana Qurratuaina.jpeg" alt="Xyza Syarafana Qurratuaina">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Xyza Syarafana Qurratuaina</h3>
+                <div class="team-card-role">Aktris</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Tabola bale"</p>
+                </div>
+            </div>
+
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/XI6_fatimah yasmin.jpg" alt="Fatimah Yasmin">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Fatimah Yasmin</h3>
+                <div class="team-card-role">Aktris</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Life is beautiful but you don’t have a clue"</p>
+                </div>
+            </div>
+
+            <div class="team-card" data-aos="fade-up">
+                <div class="team-card-image">
+                <img src="assets/image/cast&crew/XI 6 Laisya Citu Permana.JPG" alt="Laisya Citu Permana">
+                </div>
+                <div class="team-card-content">
+                <h3 class="team-card-name">Laisya Citu Permana</h3>
+                <div class="team-card-role">Aktris</div>
+                <div class="team-card-class">XI-6</div>
+                <p class="team-card-quote">"Kegagalan adalah kunci sukses paling utama"</p>
+                </div>
+            </div>
+
             </div>
         </div>
     </section>
 
-    <!-- GALLERY SECTION -->
+    <!-- GALLERY SECTION
     <section id="gallery" class="gallery-section">
         <div class="container">
             <div class="section-header" 
@@ -2117,7 +2285,7 @@ mix-blend-mode: darken;
             <div class="gallery-container">
                 <div class="gallery-grid">
                     <!-- Portrait (9:16) -->
-                    <div class="gallery-item gallery-item-tall" 
+                    <!-- <div class="gallery-item gallery-item-tall" 
                          data-aos="zoom-in" 
                          data-aos-duration="800" 
                          data-aos-delay="100">
@@ -2126,10 +2294,10 @@ mix-blend-mode: darken;
                             <h4 class="gallery-title">Proses Syuting</h4>
                             <p class="gallery-description">Pengambilan gambar dengan kamera profesional</p>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <!-- Landscape (4:3) stacked -->
-                    <div class="gallery-item" 
+                    <!-- <div class="gallery-item" 
                          data-aos="zoom-in" 
                          data-aos-duration="800" 
                          data-aos-delay="150">
@@ -2138,10 +2306,10 @@ mix-blend-mode: darken;
                             <h4 class="gallery-title">Brainstorming Kreatif</h4>
                             <p class="gallery-description">Diskusi pengembangan konsep cerita</p>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <!-- Landscape (4:3) stacked -->
-                    <div class="gallery-item" 
+                    <!-- <div class="gallery-item" 
                          data-aos="zoom-in" 
                          data-aos-duration="800" 
                          data-aos-delay="200">
@@ -2150,10 +2318,10 @@ mix-blend-mode: darken;
                             <h4 class="gallery-title">Peralatan Produksi</h4>
                             <p class="gallery-description">Teknologi dan alat-alat profesional</p>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <!-- Square (1:1) -->
-                    <div class="gallery-item" 
+                    <!-- <div class="gallery-item" 
                          data-aos="zoom-in" 
                          data-aos-duration="800" 
                          data-aos-delay="250">
@@ -2162,10 +2330,10 @@ mix-blend-mode: darken;
                             <h4 class="gallery-title">Set Produksi</h4>
                             <p class="gallery-description">Lokasi syuting yang dipersiapkan</p>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <!-- Portrait (3:4) -->
-                    <div class="gallery-item gallery-item-tall" 
+                    <!-- <div class="gallery-item gallery-item-tall" 
                          data-aos="zoom-in" 
                          data-aos-duration="800" 
                          data-aos-delay="300">
@@ -2174,10 +2342,10 @@ mix-blend-mode: darken;
                             <h4 class="gallery-title">Kamera Professional</h4>
                             <p class="gallery-description">Alat utama produksi film berkualitas</p>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <!-- Wide (16:9) -->
-                    <div class="gallery-item gallery-item-wide" 
+                    <!-- <div class="gallery-item gallery-item-wide" 
                          data-aos="zoom-in" 
                          data-aos-duration="800" 
                          data-aos-delay="350">
@@ -2190,7 +2358,7 @@ mix-blend-mode: darken;
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section">
